@@ -13,3 +13,4 @@ __pycache__/
 *.pyc
 repo-offline/
 .venv/
+repo-lint.json

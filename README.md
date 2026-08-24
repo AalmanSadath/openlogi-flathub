@@ -78,14 +78,20 @@ two stay in step. A distro build can be old enough to reject
 `--compose-url-policy` outright, which is how the CI run that added these flags
 first failed.
 
-It runs the build in its own sandbox, and `--user` there does not mean the
-host's user installation, so a runtime installed with `flatpak install --user`
-is invisible to it:
+Note the difference from CI, which builds with a distro `flatpak-builder`
+instead. Running the build *through* a Flatpak means running it in a sandbox,
+and a CI runner has no session for one: it cannot reach dconf, and asking it to
+install a runtime fails with `Cannot autolaunch D-Bus without X11 $DISPLAY`.
+Flathub solves that by building inside a privileged container. This repository
+does not need to, because what CI exists to prove is that cargo needs no
+network, and a distro builder proves that fine.
 
-    Failed to init: Unable to find sdk org.freedesktop.Sdk version 25.08
-
-Install the runtimes into the system installation and let flatpak-builder use
-its `--system` default. That is what CI does.
+The consequence is that CI cannot mirror screenshots, so its repo lint always
+reports `appstream-external-screenshot-url` and
+`appstream-screenshots-not-mirrored-in-ostree`. It asserts the error set is
+exactly those two rather than ignoring the check, so a missing screenshot or a
+bad app ID still fails. Locally, with the flags above, the export is fully
+mirrored and the linter is silent.
 
 Both flags matter. Without them the linter reports
 `appstream-external-screenshot-url` and `appstream-remote-icon-not-mirrored`,
