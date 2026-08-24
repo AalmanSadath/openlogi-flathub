@@ -41,6 +41,21 @@
 
   <launchable type="desktop-id">org.openlogi.OpenLogi.desktop</launchable>
 
+  <!-- The image files sit in screenshots/ in this repository and are served
+       raw from it. Flathub mirrors them into the app's own commit at build
+       time, so the URLs have to resolve when a build runs, not when someone
+       views the page: this repository has to stay public. -->
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/AalmanSadath/openlogi-flathub/main/screenshots/Configuration.png</image>
+      <caption>Assigning an action to each button on an MX Master 3S</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/AalmanSadath/openlogi-flathub/main/screenshots/LaunchScreen.png</image>
+      <caption>Connected devices, with connection type and battery level</caption>
+    </screenshot>
+  </screenshots>
+
   <url type="homepage">https://github.com/AprilNEA/OpenLogi</url>
   <url type="bugtracker">https://github.com/AprilNEA/OpenLogi/issues</url>
   <url type="vcs-browser">https://github.com/AprilNEA/OpenLogi</url>

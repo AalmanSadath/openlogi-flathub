@@ -123,6 +123,26 @@ invents nothing; every revision it writes comes from the lock.
 The manifest runs it before cargo, and it must also be run before generating
 `cargo-sources.json` so the two agree.
 
+## Screenshots
+
+The metainfo references screenshots by URL rather than shipping them, and
+Flathub mirrors them into the app's commit at build time, so the URLs have to
+resolve when a build runs.
+
+The files are in `screenshots/` here and served raw from this repository:
+
+    https://raw.githubusercontent.com/AalmanSadath/openlogi-flathub/main/screenshots/…
+
+Which means **this repository has to stay public**. If it goes private the URLs
+return 404 to anonymous requests, and the next Flathub build fails on
+`appstream-screenshots-not-mirrored-in-ostree` rather than on anything to do
+with the build itself.
+
+The URLs track `main`, so replacing a screenshot is a commit and nothing else.
+
+Flathub wants the window at 1000x700 or smaller, or 2000x1400 for HiDPI, and
+the first `<screenshot>` is what the app page leads with.
+
 ## Host setup
 
 Identical to the other package, and unavoidable: a Flatpak cannot write to
@@ -146,7 +166,9 @@ Solaar, the other Logitech manager on Flathub, carries the same requirement.
 
 Outstanding before this can go to Flathub:
 
-- **Screenshots.** At least one is required and the metainfo has none.
+- **Screenshots.** Two placeholders are in place. They still show v0.7.7 in the
+  corner, and the devices view is mostly empty space around a single card, so
+  both are worth reshooting before submission.
 - **Whether a third-party submission is the right route at all.** Flathub rejects
   third-party submissions when upstream distributes an official Flatpak
   elsewhere. Upstream does not today, but
