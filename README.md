@@ -61,15 +61,22 @@ is the failure Flathub's builders would hit.
 To reproduce their export as well, which is what the linter checks:
 
 ```sh
-flatpak-builder --user --force-clean \
+flatpak install -y flathub org.flatpak.Builder
+
+flatpak run org.flatpak.Builder --user --force-clean \
   --compose-url-policy=full \
   --mirror-screenshots-url=https://dl.flathub.org/media \
   --repo=repo build org.openlogi.OpenLogi.yml
 
-flatpak install -y flathub org.flatpak.Builder
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest org.openlogi.OpenLogi.yml
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 ```
+
+`org.flatpak.Builder` rather than a distro flatpak-builder, here and in CI. It is
+the same tool Flathub builds with and carries the linter alongside it, so the
+two stay in step. A distro build can be old enough to reject
+`--compose-url-policy` outright, which is how the CI run that added these flags
+first failed.
 
 Both flags matter. Without them the linter reports
 `appstream-external-screenshot-url` and `appstream-remote-icon-not-mirrored`,

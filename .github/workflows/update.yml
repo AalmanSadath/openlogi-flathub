@@ -131,10 +131,17 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y flatpak flatpak-builder
+          # No flatpak-builder from apt. The runner's is old enough to reject
+          # --compose-url-policy, and a builder whose behaviour depends on
+          # which Ubuntu the runner image happens to be is not what this
+          # workflow is trying to prove. org.flatpak.Builder is the same tool
+          # Flathub builds with, versioned with it, and it carries the linter
+          # too.
+          sudo apt-get install -y flatpak ostree
           flatpak remote-add --if-not-exists --user \
             flathub https://dl.flathub.org/repo/flathub.flatpakrepo
           flatpak install --user -y --noninteractive flathub \
+            org.flatpak.Builder \
             "org.freedesktop.Platform//${RUNTIME_VERSION}" \
             "org.freedesktop.Sdk//${RUNTIME_VERSION}" \
             "org.freedesktop.Sdk.Extension.rust-stable//${RUNTIME_VERSION}" \
@@ -155,9 +162,9 @@ jobs:
       - name: Build offline
         run: |
           set -euo pipefail
-          flatpak-builder --user --force-clean --download-only \
+          flatpak run org.flatpak.Builder --user --force-clean --download-only \
             build "${FLATPAK_ID}.yml"
-          flatpak-builder --user --force-clean --disable-download \
+          flatpak run org.flatpak.Builder --user --force-clean --disable-download \
             --repo=repo-offline build "${FLATPAK_ID}.yml"
           ostree --repo=repo-offline refs
 
@@ -171,7 +178,7 @@ jobs:
       - name: Export the way Flathub does
         run: |
           set -euo pipefail
-          flatpak-builder --user --force-clean \
+          flatpak run org.flatpak.Builder --user --force-clean \
             --compose-url-policy=full \
             --mirror-screenshots-url=https://dl.flathub.org/media \
             --repo=repo build "${FLATPAK_ID}.yml"
@@ -183,7 +190,6 @@ jobs:
       - name: Lint the way Flathub does
         run: |
           set -euo pipefail
-          flatpak install --user -y --noninteractive flathub org.flatpak.Builder
           flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
             manifest "${FLATPAK_ID}.yml"
           flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
