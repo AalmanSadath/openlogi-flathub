@@ -1,0 +1,166 @@
+# Flathub manifest for OpenLogi, built from an upstream release tarball.
+#
+# This is the offline sibling of the manifest in AalmanSadath/openlogi-flatpak.
+# That one publishes to a self-hosted OSTree repository and may use the network
+# during the build; Flathub may not:
+#
+#   "There is no network access during the build process. This means using
+#    --share=network inside build-args will not work."
+#
+# Everything that differs between the two manifests follows from that one rule.
+# No application code is patched. The one edit made to the tarball is
+# pin-git-revs.py rewriting a dependency declaration, and it only writes back a
+# revision Cargo.lock already pinned; see the build-commands for why cargo needs
+# that spelled out.
+#
+#   - Rust comes from org.freedesktop.Sdk.Extension.rust-stable rather than a
+#     rustup download. The workspace asks for rust-version 1.98 and the 25.08
+#     extension ships 1.98.0, so the SDK satisfies it exactly. rust-toolchain.toml
+#     names `channel = "stable"`, which is a rustup feature and is inert without
+#     rustup installed, so cargo simply uses the toolchain on PATH.
+#   - llvm20, because openlogi-camera pulls v4l2-sys-mit, whose build script runs
+#     bindgen and dlopens libclang. The base SDK ships none.
+#   - Every crate is declared up front in cargo-sources.json, generated from the
+#     release's Cargo.lock. See README.md for how it is regenerated.
+#
+# Local build:
+#   flatpak-builder --user --install --force-clean build org.openlogi.OpenLogi.yml
+id: org.openlogi.OpenLogi
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.llvm20
+command: openlogi-desktop
+
+finish-args:
+  # ── display ────────────────────────────────────────────────────────────────
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  # GPUI renders through wgpu/Vulkan.
+  - --device=dri
+
+  # ── device access ──────────────────────────────────────────────────────────
+  # /dev/hidraw* for HID++ I/O, /dev/input/event* for the evdev read side of the
+  # hook, /dev/uinput for the synthetic-event write side. `--device=all` is the
+  # only permission covering hidraw and uinput; `--device=input` leaves both out.
+  # Solaar, the other Logitech manager on Flathub, carries the same permission
+  # for the same reason.
+  #
+  # This grants the sandbox a path to those nodes, not DAC permission: the host
+  # still needs 70-openlogi.rules installed, exactly as a distro package would.
+  # The rules ship inside the app at /app/share/openlogi/udev/ for that purpose.
+  - --device=all
+
+  # ── network ────────────────────────────────────────────────────────────────
+  # Device render images are fetched from OpenLogi's asset mirrors and cached in
+  # the app's data dir. No account, no telemetry.
+  - --share=network
+
+  # ── D-Bus ──────────────────────────────────────────────────────────────────
+  # Media-key actions drive whatever player is on the bus, over MPRIS.
+  - --talk-name=org.mpris.MediaPlayer2.*
+
+modules:
+  - name: openlogi
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm20/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm20/lib
+      env:
+        # cargo-sources.json lays the vendor tree out under `cargo/` in this
+        # module's build directory and writes `cargo/config` pointing at it.
+        # CARGO_HOME has to name that same directory or cargo never reads the
+        # config, falls back to the network, and fails with
+        # "can't checkout from '<git-url>': you are in the offline mode".
+        CARGO_HOME: /run/build/openlogi/cargo
+        # Where bindgen looks for libclang (v4l2-sys-mit's build script).
+        LIBCLANG_PATH: /usr/lib/sdk/llvm20/lib
+        # The GPUI crates are the long pole; debug info is dead weight here.
+        CARGO_PROFILE_RELEASE_DEBUG: 'false'
+        # openlogi-desktop's build script embeds gpui-component's colour
+        # themes, and finds them by walking up from that crate's manifest to
+        # the checkout root. Vendoring breaks the walk: the generator vendors
+        # gpui-component's `crates/ui` alone, while `themes/` sits at the
+        # repository root, so the two are no longer relatives. The build script
+        # offers this override for the case, and the copy below fills it.
+        OPENLOGI_THEMES_DIR: /run/build/openlogi/themes
+    build-commands:
+      # Upstream declares gpui as `{ git = "…/zed" }` with no revision, which is
+      # a branch-tracking source, and cargo refuses to use a vendored
+      # replacement for one of those: it wants to ask the remote what the
+      # branch points at first. The commit is not unknown, Cargo.lock records
+      # it, so this promotes the lock's own value into an explicit rev on both
+      # sides. It chooses nothing, and cargo-sources.json is generated from a
+      # tree this has already been run over, so the two agree.
+      - python3 pin-git-revs.py
+
+      # The themes the build script wants, taken from the checkout the vendor
+      # tree was cut from. Globbed rather than spelled out because the
+      # directory carries gpui-component's short commit, which moves whenever
+      # upstream bumps the dependency; the test turns a glob that matched
+      # nothing into an error here rather than a confusing build-script panic.
+      - cp -r flatpak-cargo/git/gpui-component-*/themes themes
+      - test -f themes/catppuccin.json
+
+      # --offline is belt and braces next to a sandbox that has no network
+      # anyway, and it is worth having: it turns a dependency missing from
+      # cargo-sources.json into a cargo error naming the crate, rather than a
+      # network timeout that reads like infrastructure trouble.
+      - cargo build --release --locked --offline
+          -p openlogi -p openlogi-desktop -p openlogi-overlay -p openlogi-agent
+
+      # ── binaries ─────────────────────────────────────────────────────────
+      # All four. The GUI owns no device I/O (it is a pure IPC client) and it
+      # launches the agent from beside its own executable, so a bundle missing
+      # the agent starts, renders, and lists nothing.
+      - install -Dm755 target/release/openlogi         /app/bin/openlogi
+      - install -Dm755 target/release/openlogi-desktop /app/bin/openlogi-desktop
+      - install -Dm755 target/release/openlogi-overlay /app/bin/openlogi-overlay
+      - install -Dm755 target/release/openlogi-agent   /app/bin/openlogi-agent
+
+      # ── XDG integration ──────────────────────────────────────────────────
+      # The .desktop and AppStream files are packaging's own: upstream ships a
+      # .desktop named for a system install, and no AppStream metadata at all.
+      - install -Dm644 org.openlogi.OpenLogi.desktop
+          /app/share/applications/org.openlogi.OpenLogi.desktop
+      - install -Dm644 org.openlogi.OpenLogi.metainfo.xml
+          /app/share/metainfo/org.openlogi.OpenLogi.metainfo.xml
+
+      # Rescaled ahead of time and committed rather than generated during the
+      # build. design/icon/openlogi.png is 1024x1024, which `flatpak
+      # build-export` rejects outright ("Image too large. Max. size 512x512"),
+      # and scaling it here would mean depending on an image tool inside the
+      # SDK for a result that never changes between releases.
+      - for px in 512 256 128 64; do
+          install -Dm644 "icons/org.openlogi.OpenLogi-${px}.png"
+            "/app/share/icons/hicolor/${px}x${px}/apps/org.openlogi.OpenLogi.png";
+        done
+
+      # ── host-side udev rules ─────────────────────────────────────────────
+      # A Flatpak cannot write /etc/udev/rules.d. Ship the rules so the user can
+      # copy them out; see the README for the one-time command.
+      - install -Dm644 packaging/linux/udev/70-openlogi.rules
+          /app/share/openlogi/udev/70-openlogi.rules
+
+      - install -Dm644 LICENSE-APACHE /app/share/licenses/openlogi/LICENSE-APACHE
+      - install -Dm644 LICENSE-MIT    /app/share/licenses/openlogi/LICENSE-MIT
+    sources:
+      - type: archive
+        url: https://github.com/AprilNEA/OpenLogi/archive/refs/tags/v0.7.10.tar.gz
+        sha256: afe41fbefc8533a72d5aa4489f7909052af44f0211558ce2078de527994a01cf
+        strip-components: 1
+      # Generated from the tarball's Cargo.lock. Regenerate whenever the version
+      # above moves; .github/workflows/update.yml does both together.
+      - cargo-sources.json
+      - type: file
+        path: tools/pin-git-revs.py
+      - type: file
+        path: org.openlogi.OpenLogi.desktop
+      - type: file
+        path: org.openlogi.OpenLogi.metainfo.xml
+      - type: dir
+        path: icons
+        dest: icons

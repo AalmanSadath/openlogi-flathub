@@ -1,0 +1,67 @@
+--- /tmp/claude-1000/-home-aalman-projects-OpenLogi/3ce748f9-8932-499e-a5c1-efbfd27ca136/scratchpad/generator-pristine.py	2026-08-25 06:04:24.564312978 +1000
++++ tools/flatpak-cargo-generator.py	2026-08-25 06:05:16.022591118 +1000
+@@ -218,7 +218,12 @@
+         return package
+ 
+ 
+-_GitPackagesType = Dict[str, _GitPackage]
++# PATCHED (see tools/monorepo-package-selection.patch): keyed by name *and*
++# version. Upstream keys on name alone, so in a monorepo the last directory the
++# walk happens to visit wins. zed contains tooling/lints/test_fixture/gpui
++# (version 0.0.0) as well as crates/gpui (0.2.2), and the fixture was the one
++# being vendored.
++_GitPackagesType = Dict[str, Dict[str, _GitPackage]]
+ 
+ 
+ async def get_git_repo_packages(git_url: str, commit: str) -> _GitPackagesType:
+@@ -237,11 +242,17 @@
+                 workspace = cargo_toml.get("workspace") or workspace
+ 
+                 if "package" in cargo_toml:
+-                    packages[cargo_toml["package"]["name"]] = _GitPackage(
++                    pkg = _GitPackage(
+                         path=os.path.normpath(root_dir),
+                         package=cargo_toml,
+                         workspace=workspace,
+                     )
++                    try:
++                        version = str(pkg.normalized["package"]["version"])
++                    except KeyError:
++                        version = ""
++                    name = cargo_toml["package"]["name"]
++                    packages.setdefault(name, {})[version] = pkg
+         for child in os.scandir(root_dir):
+             if child.is_dir():
+                 # the workspace can be referenced by any subdirectory
+@@ -255,7 +266,10 @@
+         "Packages in %s:\n%s",
+         git_url,
+         json.dumps(
+-            {k: v.path for k, v in packages.items()},
++            {
++                k: {ver: pkg.path for ver, pkg in versions.items()}
++                for k, versions in packages.items()
++            },
+             indent=4,
+         ),
+     )
+@@ -343,7 +357,18 @@
+         cargo_vendored_entry[repo_url]["branch"] = branch[0]
+ 
+     logging.info("Adding package %s from %s", name, repo_url)
+-    git_pkg = git_repo["commits"][commit][name]
++    candidates = git_repo["commits"][commit][name]
++    version = str(package.get("version", ""))
++    if version in candidates:
++        git_pkg = candidates[version]
++    elif len(candidates) == 1:
++        git_pkg = next(iter(candidates.values()))
++    else:
++        raise ValueError(
++            f"{name} {version} from {repo_url} matches none of the "
++            f"{len(candidates)} package(s) of that name in the repository: "
++            + ", ".join(f"{v} at {p.path}" for v, p in sorted(candidates.items()))
++        )
+     pkg_repo_dir = os.path.join(
+         GIT_CACHE, git_repo_name(repo_url, commit), git_pkg.path
+     )

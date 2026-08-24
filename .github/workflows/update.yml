@@ -1,0 +1,186 @@
+# Point the manifest at an upstream release, regenerate the cargo sources for
+# it, and prove the result still builds with no network.
+#
+# The regeneration and the proof belong in one workflow on purpose. A repository
+# that only regenerates would go stale silently: cargo-sources.json is derived
+# from a Cargo.lock nobody here controls, and the failure it produces (a crate
+# missing from the vendor tree) does not show up until something builds offline.
+# Flathub's builders would be the first to notice, which is the wrong place.
+name: Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Upstream tag to package (blank = latest release)"
+        type: string
+        default: ""
+      commit:
+        description: "Commit the regenerated sources"
+        type: boolean
+        default: true
+  # Upstream releases are not events this repository can see, so poll. Weekly
+  # rather than daily: nothing here is served to users, so being a few days
+  # behind costs nothing, and the proof build is expensive.
+  schedule:
+    - cron: "23 5 * * 1"
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  FLATPAK_ID: org.openlogi.OpenLogi
+  UPSTREAM: AprilNEA/OpenLogi
+  RUNTIME_VERSION: "25.08"
+
+jobs:
+  update:
+    name: Regenerate and verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Resolve the upstream release
+        id: pick
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REQUESTED: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          if [ -n "${REQUESTED}" ]; then
+            version="${REQUESTED}"
+          else
+            version="$(gh api "repos/${UPSTREAM}/releases/latest" --jq .tag_name)"
+          fi
+          url="https://github.com/${UPSTREAM}/archive/refs/tags/${version}.tar.gz"
+          curl -fsSL "$url" -o src.tar.gz
+          sha256="$(sha256sum src.tar.gz | cut -d' ' -f1)"
+          echo "upstream release: ${version} (${sha256:0:12}…)"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "sha256=${sha256}" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate the cargo sources
+        env:
+          VERSION: ${{ steps.pick.outputs.version }}
+          SHA256: ${{ steps.pick.outputs.sha256 }}
+        run: |
+          set -euo pipefail
+          # The generator's own dependencies, pinned by its inline script
+          # metadata rather than guessed at here.
+          pip install --quiet 'aiohttp>=3.9.5,<4.0.0' 'PyYAML>=6.0.2,<7.0.0' \
+            'tomlkit>=0.13.3,<1.0'
+
+          mkdir -p src
+          tar -xzf src.tar.gz --strip-components=1 -C src
+          echo "packaging $(grep -c '^\[\[package\]\]' src/Cargo.lock) locked packages"
+
+          # Pin first, generate second. The generator reads the lock to decide
+          # what to write into the vendor config, so a lock still naming a
+          # branch produces a config naming a branch, and cargo refuses to
+          # vendor that. The manifest runs the same script inside the build, so
+          # both sides see the same tree.
+          python3 tools/pin-git-revs.py src
+
+          # --git-tarballs, or flatpak-builder clones each git dependency in
+          # full. One of them is zed-industries/zed, a monorepo pulled in for
+          # the gpui crates.
+          python3 tools/flatpak-cargo-generator.py src/Cargo.lock --git-tarballs \
+            -o cargo-sources.json
+
+          python3 - "$VERSION" "$SHA256" <<'PY'
+          import re, sys, datetime
+          version, sha256 = sys.argv[1], sys.argv[2]
+          bare = version.lstrip("v")
+
+          path = "org.openlogi.OpenLogi.yml"
+          text = open(path, encoding="utf-8").read()
+          text = re.sub(r"(archive/refs/tags/)v[^.]*[^/]*\.tar\.gz", rf"\g<1>{version}.tar.gz", text, count=1)
+          text = re.sub(r"(sha256:\s*)[0-9a-f]{64}", rf"\g<1>{sha256}", text, count=1)
+          open(path, "w", encoding="utf-8").write(text)
+
+          # AppStream drives what software centres call the latest version, so a
+          # stale <release> advertises the wrong one whatever the build contains.
+          path = "org.openlogi.OpenLogi.metainfo.xml"
+          text = open(path, encoding="utf-8").read()
+          text = re.sub(
+              r'<release version="[^"]*" date="[^"]*"/>',
+              f'<release version="{bare}" date="{datetime.date.today().isoformat()}"/>',
+              text,
+              count=1,
+          )
+          open(path, "w", encoding="utf-8").write(text)
+          print(f"manifest now points at {version}")
+          PY
+          rm -rf src src.tar.gz
+          git diff --stat
+
+      - name: Install flatpak and the runtimes
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y flatpak flatpak-builder
+          flatpak remote-add --if-not-exists --user \
+            flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+          flatpak install --user -y --noninteractive flathub \
+            "org.freedesktop.Platform//${RUNTIME_VERSION}" \
+            "org.freedesktop.Sdk//${RUNTIME_VERSION}" \
+            "org.freedesktop.Sdk.Extension.rust-stable//${RUNTIME_VERSION}" \
+            "org.freedesktop.Sdk.Extension.llvm20//${RUNTIME_VERSION}"
+
+      - name: Validate the metadata
+        run: |
+          set -euo pipefail
+          sudo apt-get install -y appstream desktop-file-utils
+          appstreamcli validate --explain "${FLATPAK_ID}.metainfo.xml"
+          desktop-file-validate "${FLATPAK_ID}.desktop"
+
+      # The point of the whole workflow. Two passes rather than one: the first
+      # is allowed to reach the network and fetch what the manifest declares,
+      # the second is not. Anything cargo wants that is not in
+      # cargo-sources.json fails here, which is what Flathub's builders would
+      # have hit.
+      - name: Build offline
+        run: |
+          set -euo pipefail
+          flatpak-builder --user --force-clean --download-only \
+            build "${FLATPAK_ID}.yml"
+          flatpak-builder --user --force-clean --disable-download \
+            --repo=repo build "${FLATPAK_ID}.yml"
+          ostree --repo=repo refs
+
+      - name: Lint the way Flathub does
+        run: |
+          set -euo pipefail
+          flatpak install --user -y --noninteractive flathub org.flatpak.Builder
+          flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+            manifest "${FLATPAK_ID}.yml"
+          flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+            repo repo
+
+      - name: Commit the regenerated sources
+        if: inputs.commit != false
+        env:
+          VERSION: ${{ steps.pick.outputs.version }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- cargo-sources.json "${FLATPAK_ID}.yml" \
+               "${FLATPAK_ID}.metainfo.xml"; then
+            echo "already at ${VERSION}, nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cargo-sources.json "${FLATPAK_ID}.yml" "${FLATPAK_ID}.metainfo.xml"
+          # Committed only after the offline build above passed, so main never
+          # holds a sources file that has not been shown to work.
+          git commit -m "chore: package ${VERSION}
+
+          cargo-sources.json regenerated from the release's Cargo.lock and
+          verified by an offline build."
+          git push

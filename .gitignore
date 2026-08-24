@@ -1,0 +1,13 @@
+# flatpak-builder working state
+.flatpak-builder/
+build/
+repo/
+*.flatpak
+
+# source checkouts used when regenerating cargo-sources.json
+/src/
+*.tar.gz
+
+# python bytecode from running the tools
+__pycache__/
+*.pyc
