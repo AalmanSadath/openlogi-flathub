@@ -151,9 +151,28 @@ jobs:
           flatpak-builder --user --force-clean --download-only \
             build "${FLATPAK_ID}.yml"
           flatpak-builder --user --force-clean --disable-download \
+            --repo=repo-offline build "${FLATPAK_ID}.yml"
+          ostree --repo=repo-offline refs
+
+      # A second export, this time with the flags Flathub's own builders use.
+      # It is not a second compile: the module cache hits, only the export runs
+      # again. Both are needed because they prove different things and cannot be
+      # combined. --disable-download above is what proves cargo needs no
+      # network; the mirroring here *does* need it, since AppStream fetches
+      # every screenshot to generate thumbnails, so asking one build to do both
+      # is asking it to be offline and online at once.
+      - name: Export the way Flathub does
+        run: |
+          set -euo pipefail
+          flatpak-builder --user --force-clean \
+            --compose-url-policy=full \
+            --mirror-screenshots-url=https://dl.flathub.org/media \
             --repo=repo build "${FLATPAK_ID}.yml"
           ostree --repo=repo refs
 
+      # Without the flags above this reports appstream-external-screenshot-url
+      # and appstream-remote-icon-not-mirrored, which look like manifest faults
+      # and are not: they are what an unmirrored local export always produces.
       - name: Lint the way Flathub does
         run: |
           set -euo pipefail

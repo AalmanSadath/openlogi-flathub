@@ -58,6 +58,26 @@ flatpak-builder --user --force-clean --disable-download build org.openlogi.OpenL
 The second command fails if anything is missing from `cargo-sources.json`, which
 is the failure Flathub's builders would hit.
 
+To reproduce their export as well, which is what the linter checks:
+
+```sh
+flatpak-builder --user --force-clean \
+  --compose-url-policy=full \
+  --mirror-screenshots-url=https://dl.flathub.org/media \
+  --repo=repo build org.openlogi.OpenLogi.yml
+
+flatpak install -y flathub org.flatpak.Builder
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest org.openlogi.OpenLogi.yml
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
+```
+
+Both flags matter. Without them the linter reports
+`appstream-external-screenshot-url` and `appstream-remote-icon-not-mirrored`,
+which read like faults in the metainfo and are not: AppStream only rewrites
+screenshot and icon URLs to their mirrored locations when asked to. This export
+needs the network, because generating the thumbnails means fetching every
+screenshot, so it cannot be the same run as the offline proof above.
+
 ## Regenerating cargo-sources.json
 
 `cargo-sources.json` is generated from the release's `Cargo.lock` and must be
