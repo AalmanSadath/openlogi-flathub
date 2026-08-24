@@ -71,10 +71,14 @@ jobs:
           SHA256: ${{ steps.pick.outputs.sha256 }}
         run: |
           set -euo pipefail
-          # The generator's own dependencies, pinned by its inline script
-          # metadata rather than guessed at here.
-          pip install --quiet 'aiohttp>=3.9.5,<4.0.0' 'PyYAML>=6.0.2,<7.0.0' \
-            'tomlkit>=0.13.3,<1.0'
+          # A venv, not `pip install`. The runner's system python is PEP 668
+          # externally managed, so installing into it can fail outright with
+          # `error: externally-managed-environment`, and that would end the run
+          # here rather than after the build proves anything. Versions come from
+          # the generator's own inline script metadata rather than guesswork.
+          python3 -m venv .venv
+          .venv/bin/pip install --quiet 'aiohttp>=3.9.5,<4.0.0' \
+            'PyYAML>=6.0.2,<7.0.0' 'tomlkit>=0.13.3,<1.0'
 
           mkdir -p src
           tar -xzf src.tar.gz --strip-components=1 -C src
@@ -90,8 +94,11 @@ jobs:
           # --git-tarballs, or flatpak-builder clones each git dependency in
           # full. One of them is zed-industries/zed, a monorepo pulled in for
           # the gpui crates.
-          python3 tools/flatpak-cargo-generator.py src/Cargo.lock --git-tarballs \
-            -o cargo-sources.json
+          # The generator needs the venv; pin-git-revs.py above is stdlib only
+          # and deliberately stays that way, because the build runs it inside
+          # the SDK where there is no venv to reach for.
+          .venv/bin/python tools/flatpak-cargo-generator.py src/Cargo.lock \
+            --git-tarballs -o cargo-sources.json
 
           python3 - "$VERSION" "$SHA256" <<'PY'
           import re, sys, datetime
@@ -117,7 +124,7 @@ jobs:
           open(path, "w", encoding="utf-8").write(text)
           print(f"manifest now points at {version}")
           PY
-          rm -rf src src.tar.gz
+          rm -rf src src.tar.gz .venv
           git diff --stat
 
       - name: Install flatpak and the runtimes

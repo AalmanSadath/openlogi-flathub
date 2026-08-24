@@ -12,3 +12,4 @@ repo/
 __pycache__/
 *.pyc
 repo-offline/
+.venv/
