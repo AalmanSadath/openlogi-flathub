@@ -138,9 +138,14 @@ jobs:
           # Flathub builds with, versioned with it, and it carries the linter
           # too.
           sudo apt-get install -y flatpak ostree
-          flatpak remote-add --if-not-exists --user \
+          # System-wide, not --user. org.flatpak.Builder runs the build inside
+          # its own sandbox, and --user there does not resolve to the host's
+          # user installation, so a runtime installed with --user is invisible
+          # to it: `Failed to init: Unable to find sdk org.freedesktop.Sdk
+          # version 25.08`. The system installation it can always see.
+          sudo flatpak remote-add --if-not-exists --system \
             flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-          flatpak install --user -y --noninteractive flathub \
+          sudo flatpak install --system -y --noninteractive flathub \
             org.flatpak.Builder \
             "org.freedesktop.Platform//${RUNTIME_VERSION}" \
             "org.freedesktop.Sdk//${RUNTIME_VERSION}" \
@@ -162,9 +167,13 @@ jobs:
       - name: Build offline
         run: |
           set -euo pipefail
-          flatpak run org.flatpak.Builder --user --force-clean --download-only \
+          # --install-deps-from makes a missing runtime a download rather than
+          # a failed run, which matters because what the sandbox can see is not
+          # obvious from outside it.
+          flatpak run org.flatpak.Builder --force-clean --download-only \
+            --install-deps-from=flathub \
             build "${FLATPAK_ID}.yml"
-          flatpak run org.flatpak.Builder --user --force-clean --disable-download \
+          flatpak run org.flatpak.Builder --force-clean --disable-download \
             --repo=repo-offline build "${FLATPAK_ID}.yml"
           ostree --repo=repo-offline refs
 
@@ -178,7 +187,7 @@ jobs:
       - name: Export the way Flathub does
         run: |
           set -euo pipefail
-          flatpak run org.flatpak.Builder --user --force-clean \
+          flatpak run org.flatpak.Builder --force-clean \
             --compose-url-policy=full \
             --mirror-screenshots-url=https://dl.flathub.org/media \
             --repo=repo build "${FLATPAK_ID}.yml"
