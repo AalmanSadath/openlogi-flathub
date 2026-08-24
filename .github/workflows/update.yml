@@ -61,14 +61,34 @@ jobs:
           url="https://github.com/${UPSTREAM}/archive/refs/tags/${version}.tar.gz"
           curl -fsSL "$url" -o src.tar.gz
           sha256="$(sha256sum src.tar.gz | cut -d' ' -f1)"
-          echo "upstream release: ${version} (${sha256:0:12}…)"
-          echo "version=${version}" >> "$GITHUB_OUTPUT"
-          echo "sha256=${sha256}" >> "$GITHUB_OUTPUT"
+
+          # When upstream published it, not when this ran. AppStream's release
+          # date is shown to users as the date of the release, so "today" is
+          # simply the wrong answer -- and it is unstable as well: two runs
+          # either side of midnight UTC disagree, so every scheduled run on a
+          # new day would rewrite the file and push a commit with no upstream
+          # change behind it.
+          released="$(gh api "repos/${UPSTREAM}/releases/tags/${version}" \
+            --jq '.published_at' 2>/dev/null | cut -c1-10 || true)"
+          if [ -z "$released" ]; then
+            # A tag with no GitHub release behind it. Rare, and the tag's own
+            # commit date is still a truthful answer.
+            released="$(gh api "repos/${UPSTREAM}/commits/${version}" \
+              --jq '.commit.committer.date' | cut -c1-10)"
+          fi
+
+          echo "upstream release: ${version} (${sha256:0:12}…) published ${released}"
+          {
+            echo "version=${version}"
+            echo "sha256=${sha256}"
+            echo "released=${released}"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Regenerate the cargo sources
         env:
           VERSION: ${{ steps.pick.outputs.version }}
           SHA256: ${{ steps.pick.outputs.sha256 }}
+          RELEASED: ${{ steps.pick.outputs.released }}
         run: |
           set -euo pipefail
           # A venv, not `pip install`. The runner's system python is PEP 668
@@ -100,9 +120,9 @@ jobs:
           .venv/bin/python tools/flatpak-cargo-generator.py src/Cargo.lock \
             --git-tarballs -o cargo-sources.json
 
-          python3 - "$VERSION" "$SHA256" <<'PY'
-          import re, sys, datetime
-          version, sha256 = sys.argv[1], sys.argv[2]
+          python3 - "$VERSION" "$SHA256" "$RELEASED" <<'PY'
+          import re, sys
+          version, sha256, released = sys.argv[1], sys.argv[2], sys.argv[3]
           bare = version.lstrip("v")
 
           path = "org.openlogi.OpenLogi.yml"
@@ -117,7 +137,7 @@ jobs:
           text = open(path, encoding="utf-8").read()
           text = re.sub(
               r'<release version="[^"]*" date="[^"]*"/>',
-              f'<release version="{bare}" date="{datetime.date.today().isoformat()}"/>',
+              f'<release version="{bare}" date="{released}"/>',
               text,
               count=1,
           )
