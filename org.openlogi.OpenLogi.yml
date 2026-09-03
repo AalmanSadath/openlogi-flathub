@@ -27,6 +27,19 @@
 #   flatpak-builder --user --install --force-clean build org.openlogi.OpenLogi.yml
 id: org.openlogi.OpenLogi
 runtime: org.freedesktop.Platform
+# 25.08 and not 26.08, which the linter asks for as
+# `runtime-update-available-to-org.freedesktop.Platform-26.08`. There is no
+# org.freedesktop.Sdk.Extension.rust-stable//26.08 on Flathub:
+#
+#   error: Error searching remote flathub: Can't find ref
+#   org.freedesktop.Sdk.Extension.rust-stable//26.08
+#
+# rust-stable is published for 18.08 through 25.08 and stops; rust-nightly
+# stops there too, while Platform, Sdk and llvm22 all exist for 26.08. Without
+# that extension Rust would have to come from a rustup download, which is the
+# network access during the build that this whole manifest exists to avoid.
+# Revisit when the extension is published for 26.08; the move also swaps
+# llvm20, which 26.08 does not carry, for llvm22.
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
