@@ -9,16 +9,16 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://codeload.github.com/zed-industries/zed/tar.gz/1a246efd7e1b83ab568ec5e3e6c1a43a42e1abba",
-        "sha256": "a97f9a9253b64135b633e0d168a15b134a1fad8ec809005732e7cbd38fc24f01",
-        "dest": "flatpak-cargo/git/zed-1a246ef"
+        "url": "https://codeload.github.com/zed-industries/zed/tar.gz/cc053a4a6fa2fd0e8793201ed9099466af1be0b1",
+        "sha256": "b97daacc8edaeb2e604255889de5c9c34e1de9c7c1a3e9030ac957c2c71aac6d",
+        "dest": "flatpak-cargo/git/zed-cc053a4"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://codeload.github.com/longbridge/gpui-component/tar.gz/031555662e99a1b5a549990b47f246d475b8288a",
-        "sha256": "2771982ee8d30230ef40832e046786aae3787ed5719058bf643ca89458fc4e41",
-        "dest": "flatpak-cargo/git/gpui-component-0315556"
+        "url": "https://codeload.github.com/longbridge/gpui-component/tar.gz/da4f93696dc2b2b4d91bcc42412b9053a3d24de8",
+        "sha256": "3f1ab9a526d330f3e67f5285de37443f1016b15a88ee7fdfa1bf7a98f9c4c613",
+        "dest": "flatpak-cargo/git/gpui-component-da4f936"
     },
     {
         "type": "archive",
@@ -33,6 +33,13 @@
         "url": "https://codeload.github.com/proptest-rs/proptest/tar.gz/3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b",
         "sha256": "bbcee5bc92378ea21fe35392841b372f505e0cb444a1bbaa79647bbf849cd019",
         "dest": "flatpak-cargo/git/proptest-3dca198"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://codeload.github.com/zed-industries/wasm_thread/tar.gz/0cf96c7708dfb97ccf3da50347e25edcf75d6937",
+        "sha256": "4dc9b3324038ed7f761f8b32811c27eb8e5234a940fa741a6d5214eb88a7abb6",
+        "dest": "flatpak-cargo/git/wasm_thread-0cf96c7"
     },
     {
         "type": "archive",
@@ -375,6 +382,19 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/appcatalog/appcatalog-0.1.1.crate",
+        "sha256": "7c0df9d680ca6c523086eb6e07e9dd6c993216492d2e52d27a0ec0a00b14704b",
+        "dest": "cargo/vendor/appcatalog-0.1.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"7c0df9d680ca6c523086eb6e07e9dd6c993216492d2e52d27a0ec0a00b14704b\", \"files\": {}}",
+        "dest": "cargo/vendor/appcatalog-0.1.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
         "type": "shell",
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/appicon-13f3df0/.\" \"cargo/vendor/appicon\""
@@ -395,14 +415,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ar_archive_writer/ar_archive_writer-0.5.1.crate",
-        "sha256": "7eb93bbb63b9c227414f6eb3a0adfddca591a8ce1e9b60661bb08969b87e340b",
-        "dest": "cargo/vendor/ar_archive_writer-0.5.1"
+        "url": "https://static.crates.io/crates/ar_archive_writer/ar_archive_writer-0.5.3.crate",
+        "sha256": "73cd58deff2140a0a8eae87e417bd01db68a33e148aa93d1e8cd837e55e312b6",
+        "dest": "cargo/vendor/ar_archive_writer-0.5.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"7eb93bbb63b9c227414f6eb3a0adfddca591a8ce1e9b60661bb08969b87e340b\", \"files\": {}}",
-        "dest": "cargo/vendor/ar_archive_writer-0.5.1",
+        "contents": "{\"package\": \"73cd58deff2140a0a8eae87e417bd01db68a33e148aa93d1e8cd837e55e312b6\", \"files\": {}}",
+        "dest": "cargo/vendor/ar_archive_writer-0.5.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -442,6 +462,19 @@
         "type": "inline",
         "contents": "{\"package\": \"0ae92a5119aa49cdbcf6b9f893fe4e1d98b04ccbf82ee0584ad948a44a734dea\", \"files\": {}}",
         "dest": "cargo/vendor/arg_enum_proc_macro-0.3.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/array-init/array-init-2.1.0.crate",
+        "sha256": "3d62b7694a562cdf5a74227903507c56ab2cc8bdd1f781ed5cb4cf9c9f810bfc",
+        "dest": "cargo/vendor/array-init-2.1.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"3d62b7694a562cdf5a74227903507c56ab2cc8bdd1f781ed5cb4cf9c9f810bfc\", \"files\": {}}",
+        "dest": "cargo/vendor/array-init-2.1.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -598,19 +631,6 @@
         "type": "inline",
         "contents": "{\"package\": \"8034a681df4aed8b8edbd7fbe472401ecf009251c8b40556b304567052e294c5\", \"files\": {}}",
         "dest": "cargo/vendor/async-fs-2.2.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/async-hid/async-hid-0.5.3.crate",
-        "sha256": "9f70c6f427f9dc3942b5863b2677a34dfcdd5ec46fe3c21a57883c50403269c5",
-        "dest": "cargo/vendor/async-hid-0.5.3"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"9f70c6f427f9dc3942b5863b2677a34dfcdd5ec46fe3c21a57883c50403269c5\", \"files\": {}}",
-        "dest": "cargo/vendor/async-hid-0.5.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -949,6 +969,32 @@
         "type": "inline",
         "contents": "{\"package\": \"5f58bf3d7db68cfbac37cfc485a8d711e87e064c3d0fe0435b92f7a407f9d6b3\", \"files\": {}}",
         "dest": "cargo/vendor/bindgen-0.71.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/binrw/binrw-0.15.2.crate",
+        "sha256": "6ad120d555272286c1017d25165ab8bd74806f13fc85b258484ec7e4ce75458f",
+        "dest": "cargo/vendor/binrw-0.15.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"6ad120d555272286c1017d25165ab8bd74806f13fc85b258484ec7e4ce75458f\", \"files\": {}}",
+        "dest": "cargo/vendor/binrw-0.15.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/binrw_derive/binrw_derive-0.15.2.crate",
+        "sha256": "6df92e0e9baae4dc82c7bad7715ca40c0a5c71539057bf2ea04a5c29c980410b",
+        "dest": "cargo/vendor/binrw_derive-0.15.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"6df92e0e9baae4dc82c7bad7715ca40c0a5c71539057bf2ea04a5c29c980410b\", \"files\": {}}",
+        "dest": "cargo/vendor/binrw_derive-0.15.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1422,14 +1468,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/chacha20/chacha20-0.10.1.crate",
-        "sha256": "d524456ba66e72eb8b115ff89e01e497f8e6d11d78b70b1aa13c0fbd97540a81",
-        "dest": "cargo/vendor/chacha20-0.10.1"
+        "url": "https://static.crates.io/crates/chacha20/chacha20-0.10.2.crate",
+        "sha256": "65c35e4b699c7e15ccbe7ee35c005e4fc0a278d22238a2857e6ce2dadeda1b06",
+        "dest": "cargo/vendor/chacha20-0.10.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"d524456ba66e72eb8b115ff89e01e497f8e6d11d78b70b1aa13c0fbd97540a81\", \"files\": {}}",
-        "dest": "cargo/vendor/chacha20-0.10.1",
+        "contents": "{\"package\": \"65c35e4b699c7e15ccbe7ee35c005e4fc0a278d22238a2857e6ce2dadeda1b06\", \"files\": {}}",
+        "dest": "cargo/vendor/chacha20-0.10.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1591,7 +1637,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/collections\" \"cargo/vendor/collections\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/collections\" \"cargo/vendor/collections\""
         ]
     },
     {
@@ -2064,14 +2110,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/crossbeam-epoch/crossbeam-epoch-0.9.18.crate",
-        "sha256": "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e",
-        "dest": "cargo/vendor/crossbeam-epoch-0.9.18"
+        "url": "https://static.crates.io/crates/crossbeam-epoch/crossbeam-epoch-0.9.20.crate",
+        "sha256": "2d6914041f254d6e9176c01941b21115dcfb7089e55135a35411081bd106ef3f",
+        "dest": "cargo/vendor/crossbeam-epoch-0.9.20"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e\", \"files\": {}}",
-        "dest": "cargo/vendor/crossbeam-epoch-0.9.18",
+        "contents": "{\"package\": \"2d6914041f254d6e9176c01941b21115dcfb7089e55135a35411081bd106ef3f\", \"files\": {}}",
+        "dest": "cargo/vendor/crossbeam-epoch-0.9.20",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2142,14 +2188,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ctor/ctor-1.0.9.crate",
-        "sha256": "a394189d59f9befacce833f337f7b1eca5e9a91221bcdd4d28e0114d96e597b3",
-        "dest": "cargo/vendor/ctor-1.0.9"
+        "url": "https://static.crates.io/crates/ctor/ctor-1.0.13.crate",
+        "sha256": "914a755b7c2d4af2bdcff7ce1739e2db9a1b81a9b07123d8015786ae03c0980d",
+        "dest": "cargo/vendor/ctor-1.0.13"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"a394189d59f9befacce833f337f7b1eca5e9a91221bcdd4d28e0114d96e597b3\", \"files\": {}}",
-        "dest": "cargo/vendor/ctor-1.0.9",
+        "contents": "{\"package\": \"914a755b7c2d4af2bdcff7ce1739e2db9a1b81a9b07123d8015786ae03c0980d\", \"files\": {}}",
+        "dest": "cargo/vendor/ctor-1.0.13",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2298,7 +2344,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/refineable/derive_refineable\" \"cargo/vendor/derive_refineable\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/refineable/derive_refineable\" \"cargo/vendor/derive_refineable\""
         ]
     },
     {
@@ -3148,6 +3194,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/freedesktop-desktop-entry/freedesktop-desktop-entry-0.8.1.crate",
+        "sha256": "28273c5c6b97a5f07724f6652f064c0c7f637f9aa5e7c09c83bc3bc4ad4ea245",
+        "dest": "cargo/vendor/freedesktop-desktop-entry-0.8.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"28273c5c6b97a5f07724f6652f064c0c7f637f9aa5e7c09c83bc3bc4ad4ea245\", \"files\": {}}",
+        "dest": "cargo/vendor/freedesktop-desktop-entry-0.8.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/freetype-sys/freetype-sys-0.20.1.crate",
         "sha256": "0e7edc5b9669349acfda99533e9e0bcf26a51862ab43b08ee7745c55d28eb134",
         "dest": "cargo/vendor/freetype-sys-0.20.1"
@@ -3434,6 +3493,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/getset/getset-0.1.7.crate",
+        "sha256": "6cf442baaabe4213ce7d1239afc26c039180b6456da2cededa316ae2c8a77a77",
+        "dest": "cargo/vendor/getset-0.1.7"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"6cf442baaabe4213ce7d1239afc26c039180b6456da2cededa316ae2c8a77a77\", \"files\": {}}",
+        "dest": "cargo/vendor/getset-0.1.7",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/gif/gif-0.13.3.crate",
         "sha256": "4ae047235e33e2829703574b54fdec96bfbad892062d97fed2f76022287de61b",
         "dest": "cargo/vendor/gif-0.13.3"
@@ -3590,12 +3662,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui\" \"cargo/vendor/gpui\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui\" \"cargo/vendor/gpui\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gpui\"\nversion = \"0.2.2\"\nedition = \"2024\"\nauthors = [\"Nathan Sobo <nathan@zed.dev>\"]\ndescription = \"Zed's GPU-accelerated UI framework\"\nrepository = \"https://github.com/zed-industries/zed\"\npublish = true\nlicense = \"Apache-2.0\"\nhomepage = \"https://gpui.rs\"\nreadme = \"README.md\"\nkeywords = [\"desktop\", \"gui\", \"immediate\"]\ncategories = [\"gui\"]\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[features]\ndefault = [\"font-kit\", \"wayland\", \"x11\", \"windows-manifest\"]\ntest-support = [\"leak-detection\", \"collections/test-support\", \"http_client/test-support\", \"wayland\", \"x11\", \"proptest\"]\nbench = [\"test-support\", \"dep:criterion\", \"dep:hdrhistogram\"]\ninspector = [\"gpui_macros/inspector\"]\nleak-detection = [\"backtrace\"]\nwayland = []\nx11 = [\"scap?/x11\"]\nscreen-capture = [\"scap\"]\nwindows-manifest = [\"dep:embed-resource\"]\ninput-latency-histogram = [\"dep:hdrhistogram\"]\nprofiler = []\n\n[lib]\npath = \"src/gpui.rs\"\ndoctest = false\n\n[dependencies]\nanyhow = \"1.0.86\"\nasync-task = \"4.7\"\nbitflags = \"2.6.0\"\nctor = \"1.0.6\"\netagere = \"0.2\"\nfutures = \"0.3.32\"\nfutures-concurrency = \"7.7.1\"\ninventory = \"0.3.19\"\nitertools = \"0.14.0\"\nnum_cpus = \"1.13\"\nparking = \"2.0.0\"\nparking_lot = \"0.12.1\"\nprofiling = \"1\"\nrand = \"0.9\"\nraw-window-handle = \"0.6\"\nregex = \"1.5\"\nttf-parser = \"0.25\"\nseahash = \"4.1\"\nslotmap = \"1.0.6\"\nasync-channel = \"2.5.0\"\nstacksafe = \"0.1\"\ntaffy = \"=0.12.1\"\nthiserror = \"2.0.12\"\nwaker-fn = \"1.2.0\"\nlyon = \"1.0\"\npin-project = \"1.1.10\"\nspin = \"0.10.0\"\npollster = \"0.4.0\"\nurl = \"2.2\"\nweb-time = \"1.1.0\"\nheapless = \"0.9.2\"\n\n[dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[dependencies.backtrace]\noptional = true\nversion = \"0.3\"\n\n[dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[dependencies.criterion]\noptional = true\nversion = \"0.5\"\nfeatures = [\"html_reports\"]\n\n[dependencies.derive_more]\nversion = \"2.1.1\"\nfeatures = [\"add\", \"add_assign\", \"deref\", \"deref_mut\", \"display\", \"from_str\", \"mul\", \"mul_assign\", \"not\"]\n\n[dependencies.gpui_macros]\npath = \"crates/gpui_macros\"\n\n[dependencies.gpui_shared_string]\npath = \"crates/gpui_shared_string\"\n\n[dependencies.http_client]\npath = \"crates/http_client\"\n\n[dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[dependencies.postage]\nversion = \"0.5\"\nfeatures = [\"futures-traits\"]\n\n[dependencies.proptest]\noptional = true\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[dependencies.chrono]\nversion = \"0.4\"\nfeatures = [\"serde\"]\n\n[dependencies.refineable]\npath = \"crates/refineable\"\n\n[dependencies.scheduler]\npath = \"crates/scheduler\"\n\n[dependencies.resvg]\nversion = \"0.46.0\"\ndefault-features = false\nfeatures = [\"text\", \"system-fonts\", \"memmap-fonts\", \"raster-images\"]\n\n[dependencies.usvg]\nversion = \"0.46.0\"\ndefault-features = false\n\n[dependencies.util_macros]\npath = \"crates/util_macros\"\n\n[dependencies.schemars]\nversion = \"1.0\"\nfeatures = [\"indexmap2\"]\n\n[dependencies.serde]\nversion = \"1.0.221\"\nfeatures = [\"derive\", \"rc\"]\n\n[dependencies.serde_json]\nversion = \"1.0.144\"\nfeatures = [\"preserve_order\", \"raw_value\"]\n\n[dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[dependencies.strum]\nversion = \"0.27.2\"\nfeatures = [\"derive\"]\n\n[dependencies.sum_tree]\npath = \"crates/sum_tree\"\n\n[dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[dependencies.hdrhistogram]\noptional = true\nversion = \"7\"\n\n[dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.getrandom]\nversion = \"0.3.4\"\nfeatures = [\"wasm_js\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.uuid]\nfeatures = [\"js\", \"v4\", \"v5\", \"v7\", \"serde\"]\nversion = \"1.1.2\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dev-dependencies]\nwasm-bindgen = \"0.2.120\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dev-dependencies.gpui_web]\npath = \"crates/gpui_web\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\nblock = \"0.1\"\ncocoa = \"=0.26.0\"\ncocoa-foundation = \"=0.2.0\"\ncore-foundation = \"=0.10.0\"\ncore-foundation-sys = \"0.8.6\"\ncore-graphics = \"0.24\"\ncore-text = \"21\"\nforeign-types = \"0.5\"\nobjc = \"0.2\"\nmach2 = \"0.5\"\nmetal = \"0.33\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.core-video]\nversion = \"0.5.2\"\nfeatures = [\"metal\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.font-kit]\ngit = \"https://github.com/zed-industries/font-kit\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\npackage = \"zed-font-kit\"\nversion = \"0.14.1-zed\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.media]\npath = \"crates/media\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2]\noptional = true\nversion = \"0.6\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-metal]\nversion = \"0.3\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies]\nbindgen = \"0.71\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies.cbindgen]\nversion = \"0.28.0\"\ndefault-features = false\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\", target_os = \\\"macos\\\"))\".dependencies]\npathfinder_geometry = \"0.5\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\", target_os = \\\"windows\\\"))\".dependencies.scap]\noptional = true\ngit = \"https://github.com/zed-industries/scap\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\ndefault-features = false\npackage = \"zed-scap\"\nversion = \"0.0.8-zed\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.windows]\nversion = \"0.61\"\nfeatures = [\"Win32_Foundation\", \"Win32_System_Power\"]\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dev-dependencies.http_client]\nfeatures = [\"test-support\"]\npath = \"crates/http_client\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dev-dependencies.proptest]\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dev-dependencies.reqwest_client]\nfeatures = [\"test-support\"]\npath = \"crates/reqwest_client\"\n\n[dev-dependencies]\nbacktrace = \"0.3\"\nenv_logger = \"0.11\"\nrand = \"0.9\"\nunicode-segmentation = \"1.10\"\n\n[dev-dependencies.collections]\nfeatures = [\"test-support\"]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[dev-dependencies.gpui_platform]\nfeatures = [\"font-kit\", \"wayland\", \"x11\"]\npath = \"crates/gpui_platform\"\ndefault-features = false\n\n[dev-dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[dev-dependencies.lyon]\nversion = \"1.0\"\nfeatures = [\"extra\"]\n\n[dev-dependencies.scheduler]\nfeatures = [\"test-support\"]\npath = \"crates/scheduler\"\n\n[build-dependencies.embed-resource]\nversion = \"3.0\"\noptional = true\n\n[[example]]\nname = \"hello_world\"\npath = \"examples/hello_world.rs\"\n\n[[example]]\nname = \"move_entity_between_windows\"\npath = \"examples/move_entity_between_windows.rs\"\n\n[[example]]\nname = \"image\"\npath = \"examples/image/image.rs\"\n\n[[example]]\nname = \"input\"\npath = \"examples/input.rs\"\n\n[[example]]\nname = \"on_window_close_quit\"\npath = \"examples/on_window_close_quit.rs\"\n\n[[example]]\nname = \"window_movable\"\npath = \"examples/window_movable.rs\"\n\n[[example]]\nname = \"opacity\"\npath = \"examples/opacity.rs\"\n\n[[example]]\nname = \"pattern\"\npath = \"examples/pattern.rs\"\n\n[[example]]\nname = \"set_menus\"\npath = \"examples/set_menus.rs\"\n\n[[example]]\nname = \"shadow\"\npath = \"examples/shadow.rs\"\n\n[[example]]\nname = \"svg\"\npath = \"examples/svg/svg.rs\"\n\n[[example]]\nname = \"tab_stop\"\npath = \"examples/tab_stop.rs\"\n\n[[example]]\nname = \"text\"\npath = \"examples/text.rs\"\n\n[[example]]\nname = \"text_wrapper\"\npath = \"examples/text_wrapper.rs\"\n\n[[example]]\nname = \"tree\"\npath = \"examples/tree.rs\"\n\n[[example]]\nname = \"uniform_list\"\npath = \"examples/uniform_list.rs\"\n\n[[example]]\nname = \"window_shadow\"\npath = \"examples/window_shadow.rs\"\n\n[[example]]\nname = \"grid_layout\"\npath = \"examples/grid_layout.rs\"\n\n[[example]]\nname = \"list_example\"\npath = \"examples/list_example.rs\"\n\n[[example]]\nname = \"mouse_pressure\"\npath = \"examples/mouse_pressure.rs\"\n\n[[example]]\nname = \"a11y\"\npath = \"examples/a11y.rs\"\n\n[[example]]\nname = \"view_example\"\npath = \"examples/view_example/view_example_main.rs\"\n",
+        "contents": "[package]\nname = \"gpui\"\nversion = \"0.2.2\"\nedition = \"2024\"\nauthors = [\"Nathan Sobo <nathan@zed.dev>\"]\ndescription = \"Zed's GPU-accelerated UI framework\"\nrepository = \"https://github.com/zed-industries/zed\"\npublish = true\nlicense = \"Apache-2.0\"\nhomepage = \"https://gpui.rs\"\nreadme = \"README.md\"\nkeywords = [\"desktop\", \"gui\", \"immediate\"]\ncategories = [\"gui\"]\n\n[package.metadata.cargo-machete]\nignored = [\"tracing\"]\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[features]\ndefault = [\"font-kit\", \"wayland\", \"x11\", \"windows-manifest\"]\ntest-support = [\"leak-detection\", \"collections/test-support\", \"http_client/test-support\", \"wayland\", \"x11\", \"proptest\"]\nbench = [\"test-support\", \"dep:criterion\", \"dep:hdrhistogram\"]\ninspector = [\"gpui_macros/inspector\"]\nleak-detection = [\"backtrace\"]\nwayland = []\nx11 = [\"scap?/x11\"]\nscreen-capture = [\"scap\"]\nwindows-manifest = [\"dep:embed-resource\"]\ninput-latency-histogram = [\"dep:hdrhistogram\"]\nprofiler = []\n\n[lib]\npath = \"src/gpui.rs\"\ndoctest = false\n\n[dependencies]\nanyhow = \"1.0.86\"\nasync-task = \"4.7\"\nbitflags = \"2.6.0\"\nctor = \"1.0.12\"\netagere = \"0.2\"\nfutures = \"0.3.32\"\nfutures-concurrency = \"7.7.1\"\ninventory = \"0.3.19\"\nitertools = \"0.14.0\"\nnum_cpus = \"1.13\"\nparking = \"2.0.0\"\nparking_lot = \"0.12.1\"\nprofiling = \"1\"\nrand = \"0.9\"\nraw-window-handle = \"0.6\"\nregex = \"1.5\"\nttf-parser = \"0.25\"\nseahash = \"4.1\"\nslotmap = \"1.0.6\"\nasync-channel = \"2.5.0\"\nstacksafe = \"0.1\"\ntaffy = \"=0.12.2\"\nthiserror = \"2.0.12\"\ntracing = \"0.1.40\"\nwaker-fn = \"1.2.0\"\nlyon = \"1.0\"\npin-project = \"1.1.10\"\nspin = \"0.10.0\"\npollster = \"0.4.0\"\nurl = \"2.2\"\nweb-time = \"1.1.0\"\nheapless = \"0.9.2\"\n\n[dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[dependencies.backtrace]\noptional = true\nversion = \"0.3\"\n\n[dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[dependencies.criterion]\noptional = true\nversion = \"0.5\"\nfeatures = [\"html_reports\"]\n\n[dependencies.derive_more]\nversion = \"2.1.1\"\nfeatures = [\"add\", \"add_assign\", \"deref\", \"deref_mut\", \"display\", \"from_str\", \"mul\", \"mul_assign\", \"not\"]\n\n[dependencies.gpui_macros]\npath = \"crates/gpui_macros\"\n\n[dependencies.gpui_shared_string]\npath = \"crates/gpui_shared_string\"\n\n[dependencies.http_client]\npath = \"crates/http_client\"\n\n[dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[dependencies.postage]\nversion = \"0.5\"\nfeatures = [\"futures-traits\"]\n\n[dependencies.proptest]\noptional = true\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[dependencies.chrono]\nversion = \"0.4\"\nfeatures = [\"serde\"]\n\n[dependencies.refineable]\npath = \"crates/refineable\"\n\n[dependencies.scheduler]\npath = \"crates/scheduler\"\n\n[dependencies.resvg]\nversion = \"0.46.0\"\ndefault-features = false\nfeatures = [\"text\", \"system-fonts\", \"memmap-fonts\", \"raster-images\"]\n\n[dependencies.usvg]\nversion = \"0.46.0\"\ndefault-features = false\n\n[dependencies.util_macros]\npath = \"crates/util_macros\"\n\n[dependencies.schemars]\nversion = \"1.0\"\nfeatures = [\"indexmap2\"]\n\n[dependencies.serde]\nversion = \"1.0.221\"\nfeatures = [\"derive\", \"rc\"]\n\n[dependencies.serde_json]\nversion = \"1.0.144\"\nfeatures = [\"preserve_order\", \"raw_value\"]\n\n[dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[dependencies.strum]\nversion = \"0.27.2\"\nfeatures = [\"derive\"]\n\n[dependencies.sum_tree]\npath = \"crates/sum_tree\"\n\n[dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[dependencies.hdrhistogram]\noptional = true\nversion = \"7\"\n\n[dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[dependencies.ztracing]\npath = \"crates/ztracing\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.getrandom]\nversion = \"0.3.4\"\nfeatures = [\"wasm_js\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.uuid]\nfeatures = [\"js\", \"v4\", \"v5\", \"v7\", \"serde\"]\nversion = \"1.1.2\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dev-dependencies]\nwasm-bindgen = \"0.2.120\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dev-dependencies.gpui_web]\npath = \"crates/gpui_web\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\nblock = \"0.1\"\ncocoa = \"=0.26.0\"\ncocoa-foundation = \"=0.2.0\"\ncore-foundation = \"0.10\"\ncore-foundation-sys = \"0.8.6\"\ncore-graphics = \"0.24\"\ncore-text = \"21\"\nforeign-types = \"0.5\"\nobjc = \"0.2\"\nmach2 = \"0.5\"\nmetal = \"0.33\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.core-video]\nversion = \"0.5.2\"\nfeatures = [\"metal\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.font-kit]\ngit = \"https://github.com/zed-industries/font-kit\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\npackage = \"zed-font-kit\"\nversion = \"0.14.1-zed\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.media]\npath = \"crates/media\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2]\noptional = true\nversion = \"0.6\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-metal]\nversion = \"0.3\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies]\nbindgen = \"0.71\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies.cbindgen]\nversion = \"0.28.0\"\ndefault-features = false\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\", target_os = \\\"macos\\\"))\".dependencies]\npathfinder_geometry = \"0.5\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\", target_os = \\\"windows\\\"))\".dependencies.scap]\noptional = true\ngit = \"https://github.com/zed-industries/scap\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\ndefault-features = false\npackage = \"zed-scap\"\nversion = \"0.0.8-zed\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.windows]\nfeatures = [\"Win32_Foundation\", \"Win32_System_Power\", \"Data_Xml_Dom\", \"Foundation_Numerics\", \"Globalization_DateTimeFormatting\", \"Storage_Search\", \"Storage_Streams\", \"System_Threading\", \"UI_Notifications\", \"UI_ViewManagement\", \"Wdk_System_SystemServices\", \"Win32_Foundation\", \"Win32_Globalization\", \"Win32_Graphics_Direct3D\", \"Win32_Graphics_Direct3D11\", \"Win32_Graphics_Direct3D_Fxc\", \"Win32_Graphics_DirectComposition\", \"Win32_Graphics_DirectWrite\", \"Win32_Graphics_DirectManipulation\", \"Win32_Graphics_Dwm\", \"Win32_Graphics_Dxgi\", \"Win32_Graphics_Dxgi_Common\", \"Win32_Graphics_Gdi\", \"Win32_Graphics_Imaging\", \"Win32_Graphics_Hlsl\", \"Win32_Networking_WinSock\", \"Win32_Security\", \"Win32_Security_Credentials\", \"Win32_Security_Cryptography\", \"Win32_Storage_FileSystem\", \"Win32_Storage_Packaging_Appx\", \"Win32_System_Com\", \"Win32_System_Com_StructuredStorage\", \"Win32_System_Console\", \"Win32_System_Diagnostics_Debug\", \"Win32_System_DataExchange\", \"Win32_System_IO\", \"Win32_System_JobObjects\", \"Win32_System_LibraryLoader\", \"Win32_System_Memory\", \"Win32_System_Ole\", \"Win32_System_Performance\", \"Win32_System_Pipes\", \"Win32_System_RestartManager\", \"Win32_System_SystemInformation\", \"Win32_System_SystemServices\", \"Win32_System_Threading\", \"Win32_System_Variant\", \"Win32_System_WinRT\", \"Win32_UI_Controls\", \"Win32_UI_HiDpi\", \"Win32_UI_Input_Ime\", \"Win32_UI_Input_KeyboardAndMouse\", \"Win32_UI_Input_Pointer\", \"Win32_UI_Shell\", \"Win32_UI_Shell_Common\", \"Win32_UI_Shell_PropertiesSystem\", \"Win32_UI_WindowsAndMessaging\", \"Win32_Media\"]\nversion = \"0.61\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dev-dependencies.http_client]\nfeatures = [\"test-support\"]\npath = \"crates/http_client\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dev-dependencies.proptest]\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dev-dependencies.reqwest_client]\nfeatures = [\"test-support\"]\npath = \"crates/reqwest_client\"\n\n[dev-dependencies]\nbacktrace = \"0.3\"\nenv_logger = \"0.11\"\nrand = \"0.9\"\nunicode-segmentation = \"1.10\"\n\n[dev-dependencies.collections]\nfeatures = [\"test-support\"]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[dev-dependencies.gpui_platform]\nfeatures = [\"font-kit\", \"wayland\", \"x11\"]\npath = \"crates/gpui_platform\"\ndefault-features = false\n\n[dev-dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[dev-dependencies.lyon]\nversion = \"1.0\"\nfeatures = [\"extra\"]\n\n[dev-dependencies.scheduler]\nfeatures = [\"test-support\"]\npath = \"crates/scheduler\"\n\n[build-dependencies.embed-resource]\nversion = \"3.0\"\noptional = true\n\n[[example]]\nname = \"hello_world\"\npath = \"examples/hello_world.rs\"\n\n[[example]]\nname = \"move_entity_between_windows\"\npath = \"examples/move_entity_between_windows.rs\"\n\n[[example]]\nname = \"image\"\npath = \"examples/image/image.rs\"\n\n[[example]]\nname = \"input\"\npath = \"examples/input.rs\"\n\n[[example]]\nname = \"on_window_close_quit\"\npath = \"examples/on_window_close_quit.rs\"\n\n[[example]]\nname = \"window_movable\"\npath = \"examples/window_movable.rs\"\n\n[[example]]\nname = \"opacity\"\npath = \"examples/opacity.rs\"\n\n[[example]]\nname = \"pattern\"\npath = \"examples/pattern.rs\"\n\n[[example]]\nname = \"set_menus\"\npath = \"examples/set_menus.rs\"\n\n[[example]]\nname = \"system_notifications\"\npath = \"examples/system_notifications.rs\"\n\n[[example]]\nname = \"shadow\"\npath = \"examples/shadow.rs\"\n\n[[example]]\nname = \"svg\"\npath = \"examples/svg/svg.rs\"\n\n[[example]]\nname = \"tab_stop\"\npath = \"examples/tab_stop.rs\"\n\n[[example]]\nname = \"text\"\npath = \"examples/text.rs\"\n\n[[example]]\nname = \"text_wrapper\"\npath = \"examples/text_wrapper.rs\"\n\n[[example]]\nname = \"tree\"\npath = \"examples/tree.rs\"\n\n[[example]]\nname = \"uniform_list\"\npath = \"examples/uniform_list.rs\"\n\n[[example]]\nname = \"window_shadow\"\npath = \"examples/window_shadow.rs\"\n\n[[example]]\nname = \"grid_layout\"\npath = \"examples/grid_layout.rs\"\n\n[[example]]\nname = \"list_example\"\npath = \"examples/list_example.rs\"\n\n[[example]]\nname = \"mouse_pressure\"\npath = \"examples/mouse_pressure.rs\"\n\n[[example]]\nname = \"a11y\"\npath = \"examples/a11y.rs\"\n\n[[example]]\nname = \"view_example\"\npath = \"examples/view_example/view_example_main.rs\"\n",
         "dest": "cargo/vendor/gpui",
         "dest-filename": "Cargo.toml"
     },
@@ -3608,12 +3680,30 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/gpui-component-0315556/crates/ui\" \"cargo/vendor/gpui-component\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/gpui-component-da4f936/crates/base\" \"cargo/vendor/gpui-base\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\ndescription = \"UI components for building fantastic desktop application by using GPUI.\"\nkeywords = [\"desktop\", \"gpui\", \"shadcn\", \"ui\", \"uikit\"]\nlicense = \"Apache-2.0\"\nname = \"gpui-component\"\ndocumentation = \"https://docs.rs/gpui-component\"\nhomepage = \"https://longbridge.github.io/gpui-component\"\nrepository = \"https://github.com/longbridge/gpui-component\"\nreadme = \"../../README.md\"\nversion = \"0.5.2\"\npublish = true\nedition = \"2024\"\n\n[package.metadata.cargo-machete]\nignored = [\"gpui-component-assets\"]\n\n[lib]\ndoctest = false\n\n[features]\ndecimal = [\"dep:rust_decimal\"]\ninspector = [\"gpui_macros/inspector\", \"gpui/inspector\"]\ntree-sitter = [\"dep:tree-sitter\", \"dep:tree-sitter-json\"]\ntree-sitter-languages = [\"tree-sitter-astro\", \"tree-sitter-bash\", \"tree-sitter-c\", \"tree-sitter-cmake\", \"tree-sitter-cpp\", \"tree-sitter-csharp\", \"tree-sitter-css\", \"tree-sitter-diff\", \"tree-sitter-ejs\", \"tree-sitter-elixir\", \"tree-sitter-erb\", \"tree-sitter-go\", \"tree-sitter-graphql\", \"tree-sitter-html\", \"tree-sitter-java\", \"tree-sitter-javascript\", \"tree-sitter-jsdoc\", \"tree-sitter-kotlin\", \"tree-sitter-lua\", \"tree-sitter-make\", \"tree-sitter-markdown\", \"tree-sitter-php\", \"tree-sitter-proto\", \"tree-sitter-python\", \"tree-sitter-ruby\", \"tree-sitter-rust\", \"tree-sitter-scala\", \"tree-sitter-sql\", \"tree-sitter-svelte\", \"tree-sitter-swift\", \"tree-sitter-toml\", \"tree-sitter-tsx\", \"tree-sitter-typescript\", \"tree-sitter-yaml\", \"tree-sitter-zig\"]\ntree-sitter-astro = [\"tree-sitter\", \"dep:tree-sitter-astro-next\"]\ntree-sitter-bash = [\"tree-sitter\", \"dep:tree-sitter-bash\"]\ntree-sitter-c = [\"tree-sitter\", \"dep:tree-sitter-c\"]\ntree-sitter-cmake = [\"tree-sitter\", \"dep:tree-sitter-cmake\"]\ntree-sitter-cpp = [\"tree-sitter\", \"dep:tree-sitter-cpp\"]\ntree-sitter-csharp = [\"tree-sitter\", \"dep:tree-sitter-c-sharp\"]\ntree-sitter-css = [\"tree-sitter\", \"dep:tree-sitter-css\"]\ntree-sitter-diff = [\"tree-sitter\", \"dep:tree-sitter-diff\"]\ntree-sitter-ejs = [\"tree-sitter\", \"dep:tree-sitter-embedded-template\"]\ntree-sitter-elixir = [\"tree-sitter\", \"dep:tree-sitter-elixir\"]\ntree-sitter-erb = [\"tree-sitter\", \"dep:tree-sitter-embedded-template\"]\ntree-sitter-go = [\"tree-sitter\", \"dep:tree-sitter-go\"]\ntree-sitter-graphql = [\"tree-sitter\", \"dep:tree-sitter-graphql\"]\ntree-sitter-html = [\"tree-sitter\", \"dep:tree-sitter-html\"]\ntree-sitter-java = [\"tree-sitter\", \"dep:tree-sitter-java\"]\ntree-sitter-javascript = [\"tree-sitter\", \"dep:tree-sitter-javascript\"]\ntree-sitter-jsdoc = [\"tree-sitter\", \"dep:tree-sitter-jsdoc\"]\ntree-sitter-kotlin = [\"tree-sitter\", \"dep:tree-sitter-kotlin-sg\"]\ntree-sitter-lua = [\"tree-sitter\", \"dep:tree-sitter-lua\"]\ntree-sitter-make = [\"tree-sitter\", \"dep:tree-sitter-make\"]\ntree-sitter-markdown = [\"tree-sitter\", \"dep:tree-sitter-md\"]\ntree-sitter-markdown-inline = [\"tree-sitter-markdown\"]\ntree-sitter-php = [\"tree-sitter\", \"dep:tree-sitter-php\"]\ntree-sitter-proto = [\"tree-sitter\", \"dep:tree-sitter-proto\"]\ntree-sitter-python = [\"tree-sitter\", \"dep:tree-sitter-python\"]\ntree-sitter-ruby = [\"tree-sitter\", \"dep:tree-sitter-ruby\"]\ntree-sitter-rust = [\"tree-sitter\", \"dep:tree-sitter-rust\"]\ntree-sitter-scala = [\"tree-sitter\", \"dep:tree-sitter-scala\"]\ntree-sitter-sql = [\"tree-sitter\", \"dep:tree-sitter-sequel\"]\ntree-sitter-svelte = [\"tree-sitter\", \"dep:tree-sitter-svelte-next\"]\ntree-sitter-swift = [\"tree-sitter\", \"dep:tree-sitter-swift\"]\ntree-sitter-toml = [\"tree-sitter\", \"dep:tree-sitter-toml-ng\"]\ntree-sitter-tsx = [\"tree-sitter\", \"dep:tree-sitter-typescript\"]\ntree-sitter-typescript = [\"tree-sitter\", \"dep:tree-sitter-typescript\"]\ntree-sitter-yaml = [\"tree-sitter\", \"dep:tree-sitter-yaml\"]\ntree-sitter-zig = [\"tree-sitter\", \"dep:tree-sitter-zig\"]\n\n[dependencies]\nanyhow = \"1\"\nnotify = \"7.0.0\"\nrust-i18n = \"4.2.0\"\nschemars = \"1\"\nserde_json = \"1\"\nserde_repr = \"0.1\"\nsmallvec = \"1\"\ntracing = \"0.1.41\"\nlog = \"0.4\"\nenum-iterator = \"2.1.0\"\nitertools = \"0.13.0\"\nonce_cell = \"1.19.0\"\npaste = \"1\"\nregex = \"1\"\nunicode-segmentation = \"1.12.0\"\nuuid = \"1.10\"\nasync-channel = \"2.3.1\"\nfutures = \"0.3\"\nnum-traits = \"0.2\"\nhtml5ever = \"0.27\"\nmarkup5ever_rcdom = \"0.3.0\"\nchrono = \"0.4.38\"\naho-corasick = \"1.1.3\"\n\n[dependencies.gpui]\ngit = \"https://github.com/zed-industries/zed\"\n\n[dependencies.gpui_macros]\ngit = \"https://github.com/zed-industries/zed\"\n\n[dependencies.gpui-component-macros]\npath = \"crates/macros\"\nversion = \"0.5.1\"\n\n[dependencies.gpui-component-assets]\npath = \"crates/assets\"\nversion = \"0.5.1\"\n\n[dependencies.ropey]\nversion = \"=2.0.0-beta.1\"\nfeatures = [\"metric_lines_lf\", \"metric_utf16\"]\n\n[dependencies.serde]\nversion = \"1.0.219\"\nfeatures = [\"derive\"]\n\n[dependencies.sum-tree]\nversion = \"0.2.0\"\npackage = \"zed-sum-tree\"\n\n[dependencies.rust_decimal]\nversion = \"1.37.0\"\noptional = true\n\n[dependencies.markdown]\nversion = \"1.0.0\"\nfeatures = [\"serde\"]\n\n[dependencies.lsp-types]\nversion = \"0.97.0\"\nfeatures = [\"proposed\"]\n\n[dependencies.instant]\nversion = \"0.1\"\nfeatures = [\"wasm-bindgen\"]\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies]\nsmol = \"2\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter]\nversion = \"0.26\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-astro-next]\nversion = \"0.1.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-bash]\nversion = \"0.23.3\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-c]\nversion = \"0.24.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-c-sharp]\nversion = \"0.23.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-cmake]\nversion = \"0.7.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-cpp]\nversion = \"0.23.4\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-css]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-diff]\nversion = \"0.1.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-elixir]\nversion = \"0.3\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-embedded-template]\nversion = \"0.23.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-go]\nversion = \"0.23.4\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-graphql]\nversion = \"0.1.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-html]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-java]\nversion = \"0.23.5\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-javascript]\nversion = \"0.23.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-jsdoc]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-json]\nversion = \"0.24.8\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-kotlin-sg]\nversion = \"0.4.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-lua]\nversion = \"0.4.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-make]\nversion = \"1.1.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-md]\nversion = \"0.5.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-php]\nversion = \"0.24.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-proto]\nversion = \"0.2.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-python]\nversion = \"0.23.6\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-ruby]\nversion = \"0.23.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-rust]\nversion = \"0.24.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-scala]\nversion = \"0.23.4\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-sequel]\nversion = \"0.3.8\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-svelte-next]\nversion = \"0.1.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-swift]\nversion = \"0.7.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-toml-ng]\nversion = \"0.7.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-typescript]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-yaml]\nversion = \"0.7.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-zig]\nversion = \"1.1.2\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\ncore-text = \"=21.0.0\"\nraw-window-handle = \"0.6.2\"\nobjc2 = \"0.6\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-app-kit]\nversion = \"0.3\"\nfeatures = [\"NSMenu\", \"NSMenuItem\", \"NSView\", \"NSWindow\", \"NSResponder\", \"NSEvent\", \"NSImage\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-foundation]\nversion = \"0.3\"\nfeatures = [\"NSData\", \"NSString\", \"NSGeometry\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies]\nraw-window-handle = \"0.6.2\"\nresvg = \"0.45.1\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.windows]\nfeatures = [\"Win32_Foundation\", \"Win32_Graphics_Gdi\", \"Win32_Graphics_GdiPlus\", \"Win32_System_Com\", \"Win32_System_Com_StructuredStorage\", \"Win32_System_Memory\", \"Win32_UI_Input_KeyboardAndMouse\", \"Win32_UI_WindowsAndMessaging\", \"Wdk\", \"Wdk_System\", \"Wdk_System_SystemServices\"]\nversion = \"0.58.0\"\n\n[dev-dependencies]\nindoc = \"2\"\n\n[dev-dependencies.gpui]\nfeatures = [\"test-support\"]\ngit = \"https://github.com/zed-industries/zed\"\n\n[lints.clippy]\nalmost_complete_range = \"allow\"\narc_with_non_send_sync = \"allow\"\nborrowed_box = \"allow\"\ndbg_macro = \"deny\"\nlet_underscore_future = \"allow\"\nmanual_is_multiple_of = \"allow\"\nmap_entry = \"allow\"\nmodule_inception = \"allow\"\nnon_canonical_partial_ord_impl = \"allow\"\nreversed_empty_ranges = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntodo = \"deny\"\ntype_complexity = \"allow\"\nuseless_conversion = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n",
+        "contents": "[package]\ndescription = \"Behavior, interaction, and infrastructure foundations for GPUI applications.\"\nkeywords = [\"desktop\", \"gpui\", \"ui\", \"foundation\"]\nlicense = \"Apache-2.0\"\nname = \"gpui-base\"\nrepository = \"https://github.com/longbridge/gpui-component\"\nhomepage = \"https://longbridge.github.io/gpui-component\"\ndocumentation = \"https://docs.rs/gpui-base\"\nversion = \"0.5.2\"\npublish = false\nedition = \"2024\"\n\n[lib]\ndoctest = false\n\n[features]\ninspector = [\"gpui_macros/inspector\", \"gpui/inspector\"]\n\n[dependencies]\nanyhow = \"1\"\naho-corasick = \"1.1.3\"\nchrono = \"0.4.38\"\nregex = \"1\"\nschemars = \"1\"\nserde_json = \"1\"\nsmallvec = \"1\"\ntracing = \"0.1.41\"\nunicode-segmentation = \"1.12.0\"\nweb-time = \"1\"\n\n[dependencies.gpui]\nversion = \"0.2.2\"\ngit = \"https://github.com/zed-industries/zed\"\n\n[dependencies.gpui_macros]\nversion = \"0.1.0\"\ngit = \"https://github.com/zed-industries/zed\"\n\n[dependencies.instant]\nversion = \"0.1\"\nfeatures = [\"wasm-bindgen\"]\n\n[dependencies.lsp-types]\nversion = \"0.97.0\"\nfeatures = [\"proposed\"]\n\n[dependencies.ropey]\nversion = \"=2.0.0-beta.1\"\nfeatures = [\"metric_chars\", \"metric_lines_lf\", \"metric_utf16\"]\n\n[dependencies.serde]\nversion = \"1.0.219\"\nfeatures = [\"derive\"]\n\n[dependencies.sum-tree]\nversion = \"0.2.0\"\npackage = \"zed-sum-tree\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies]\nsmol = \"2\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies]\nasync-channel = \"2.3.1\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\nraw-window-handle = \"0.6.2\"\nobjc2 = \"0.6\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-app-kit]\nversion = \"0.3\"\nfeatures = [\"NSView\", \"NSWindow\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-foundation]\nversion = \"0.3\"\nfeatures = [\"NSGeometry\", \"NSString\"]\n\n[dev-dependencies]\nindoc = \"2\"\n\n[dev-dependencies.gpui]\nfeatures = [\"test-support\"]\nversion = \"0.2.2\"\ngit = \"https://github.com/zed-industries/zed\"\n\n[dev-dependencies.gpui_platform]\ngit = \"https://github.com/zed-industries/zed\"\nfeatures = [\"font-kit\", \"x11\", \"wayland\", \"runtime_shaders\"]\n\n[dev-dependencies.syntect]\nversion = \"5.3.0\"\ndefault-features = false\nfeatures = [\"parsing\", \"default-syntaxes\", \"regex-fancy\"]\n\n[lints.clippy]\nalmost_complete_range = \"allow\"\narc_with_non_send_sync = \"allow\"\nborrowed_box = \"allow\"\ndbg_macro = \"deny\"\nlet_underscore_future = \"allow\"\nmanual_is_multiple_of = \"allow\"\nmap_entry = \"allow\"\nmodule_inception = \"allow\"\nnon_canonical_partial_ord_impl = \"allow\"\nreversed_empty_ranges = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntodo = \"deny\"\ntype_complexity = \"allow\"\nuseless_conversion = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n",
+        "dest": "cargo/vendor/gpui-base",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": null, \"files\": {}}",
+        "dest": "cargo/vendor/gpui-base",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "cp -r --reflink=auto \"flatpak-cargo/git/gpui-component-da4f936/crates/ui\" \"cargo/vendor/gpui-component\""
+        ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\ndescription = \"UI components for building fantastic desktop application by using GPUI.\"\nkeywords = [\"desktop\", \"gpui\", \"shadcn\", \"ui\", \"uikit\"]\nlicense = \"Apache-2.0\"\nname = \"gpui-component\"\ndocumentation = \"https://docs.rs/gpui-component\"\nhomepage = \"https://longbridge.github.io/gpui-component\"\nrepository = \"https://github.com/longbridge/gpui-component\"\nreadme = \"../../README.md\"\nversion = \"0.5.2\"\npublish = true\nedition = \"2024\"\n\n[package.metadata.cargo-machete]\nignored = [\"gpui_macros\"]\n\n[lib]\ndoctest = false\n\n[features]\ndecimal = [\"dep:rust_decimal\"]\ninspector = [\"gpui_macros/inspector\", \"gpui/inspector\", \"gpui-base/inspector\"]\ntree-sitter = [\"dep:tree-sitter\", \"dep:tree-sitter-json\"]\ntree-sitter-languages = [\"tree-sitter-astro\", \"tree-sitter-bash\", \"tree-sitter-c\", \"tree-sitter-cmake\", \"tree-sitter-cpp\", \"tree-sitter-csharp\", \"tree-sitter-css\", \"tree-sitter-diff\", \"tree-sitter-ejs\", \"tree-sitter-elixir\", \"tree-sitter-erb\", \"tree-sitter-go\", \"tree-sitter-graphql\", \"tree-sitter-html\", \"tree-sitter-java\", \"tree-sitter-javascript\", \"tree-sitter-jsdoc\", \"tree-sitter-kotlin\", \"tree-sitter-lua\", \"tree-sitter-make\", \"tree-sitter-markdown\", \"tree-sitter-php\", \"tree-sitter-proto\", \"tree-sitter-python\", \"tree-sitter-ruby\", \"tree-sitter-rust\", \"tree-sitter-scala\", \"tree-sitter-sql\", \"tree-sitter-svelte\", \"tree-sitter-swift\", \"tree-sitter-toml\", \"tree-sitter-tsx\", \"tree-sitter-typescript\", \"tree-sitter-yaml\", \"tree-sitter-zig\"]\ntree-sitter-astro = [\"tree-sitter\", \"dep:tree-sitter-astro-next\"]\ntree-sitter-bash = [\"tree-sitter\", \"dep:tree-sitter-bash\"]\ntree-sitter-c = [\"tree-sitter\", \"dep:tree-sitter-c\"]\ntree-sitter-cmake = [\"tree-sitter\", \"dep:tree-sitter-cmake\"]\ntree-sitter-cpp = [\"tree-sitter\", \"dep:tree-sitter-cpp\"]\ntree-sitter-csharp = [\"tree-sitter\", \"dep:tree-sitter-c-sharp\"]\ntree-sitter-css = [\"tree-sitter\", \"dep:tree-sitter-css\"]\ntree-sitter-diff = [\"tree-sitter\", \"dep:tree-sitter-diff\"]\ntree-sitter-ejs = [\"tree-sitter\", \"dep:tree-sitter-embedded-template\"]\ntree-sitter-elixir = [\"tree-sitter\", \"dep:tree-sitter-elixir\"]\ntree-sitter-erb = [\"tree-sitter\", \"dep:tree-sitter-embedded-template\"]\ntree-sitter-go = [\"tree-sitter\", \"dep:tree-sitter-go\"]\ntree-sitter-graphql = [\"tree-sitter\", \"dep:tree-sitter-graphql\"]\ntree-sitter-html = [\"tree-sitter\", \"dep:tree-sitter-html\"]\ntree-sitter-java = [\"tree-sitter\", \"dep:tree-sitter-java\"]\ntree-sitter-javascript = [\"tree-sitter\", \"dep:tree-sitter-javascript\"]\ntree-sitter-jsdoc = [\"tree-sitter\", \"dep:tree-sitter-jsdoc\"]\ntree-sitter-kotlin = [\"tree-sitter\", \"dep:tree-sitter-kotlin-sg\"]\ntree-sitter-lua = [\"tree-sitter\", \"dep:tree-sitter-lua\"]\ntree-sitter-make = [\"tree-sitter\", \"dep:tree-sitter-make\"]\ntree-sitter-markdown = [\"tree-sitter\", \"dep:tree-sitter-md\"]\ntree-sitter-markdown-inline = [\"tree-sitter-markdown\"]\ntree-sitter-php = [\"tree-sitter\", \"dep:tree-sitter-php\"]\ntree-sitter-proto = [\"tree-sitter\", \"dep:tree-sitter-proto\"]\ntree-sitter-python = [\"tree-sitter\", \"dep:tree-sitter-python\"]\ntree-sitter-ruby = [\"tree-sitter\", \"dep:tree-sitter-ruby\"]\ntree-sitter-rust = [\"tree-sitter\", \"dep:tree-sitter-rust\"]\ntree-sitter-scala = [\"tree-sitter\", \"dep:tree-sitter-scala\"]\ntree-sitter-sql = [\"tree-sitter\", \"dep:tree-sitter-sequel\"]\ntree-sitter-svelte = [\"tree-sitter\", \"dep:tree-sitter-svelte-next\"]\ntree-sitter-swift = [\"tree-sitter\", \"dep:tree-sitter-swift\"]\ntree-sitter-toml = [\"tree-sitter\", \"dep:tree-sitter-toml-ng\"]\ntree-sitter-tsx = [\"tree-sitter\", \"dep:tree-sitter-typescript\"]\ntree-sitter-typescript = [\"tree-sitter\", \"dep:tree-sitter-typescript\"]\ntree-sitter-yaml = [\"tree-sitter\", \"dep:tree-sitter-yaml\"]\ntree-sitter-zig = [\"tree-sitter\", \"dep:tree-sitter-zig\"]\n\n[dependencies]\nanyhow = \"1\"\nnotify = \"7.0.0\"\nrust-i18n = \"4.2.0\"\nschemars = \"1\"\nserde_json = \"1\"\nserde_repr = \"0.1\"\nsmallvec = \"1\"\ntracing = \"0.1.41\"\nlog = \"0.4\"\nenum-iterator = \"2.1.0\"\nitertools = \"0.13.0\"\nonce_cell = \"1.19.0\"\npaste = \"1\"\nuuid = \"1.10\"\nfutures = \"0.3\"\nnum-traits = \"0.2\"\nhtml5ever = \"0.27\"\nmarkup5ever_rcdom = \"0.3.0\"\nchrono = \"0.4.38\"\n\n[dependencies.gpui]\nversion = \"0.2.2\"\ngit = \"https://github.com/zed-industries/zed\"\n\n[dependencies.gpui_macros]\nversion = \"0.1.0\"\ngit = \"https://github.com/zed-industries/zed\"\n\n[dependencies.gpui-base]\npath = \"crates/base\"\nversion = \"0.5.2\"\n\n[dependencies.gpui-component-macros]\npath = \"crates/macros\"\nversion = \"0.5.1\"\n\n[dependencies.gpui-component-assets]\npath = \"crates/assets\"\nversion = \"0.5.1\"\n\n[dependencies.ropey]\nversion = \"=2.0.0-beta.1\"\nfeatures = [\"metric_chars\", \"metric_lines_lf\", \"metric_utf16\"]\n\n[dependencies.serde]\nversion = \"1.0.219\"\nfeatures = [\"derive\"]\n\n[dependencies.sum-tree]\nversion = \"0.2.0\"\npackage = \"zed-sum-tree\"\n\n[dependencies.rust_decimal]\nversion = \"1.37.0\"\noptional = true\n\n[dependencies.markdown]\nversion = \"1.0.0\"\nfeatures = [\"serde\"]\n\n[dependencies.lsp-types]\nversion = \"0.97.0\"\nfeatures = [\"proposed\"]\n\n[dependencies.instant]\nversion = \"0.1\"\nfeatures = [\"wasm-bindgen\"]\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies]\nsmol = \"2\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter]\nversion = \"0.26\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-astro-next]\nversion = \"0.1.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-bash]\nversion = \"0.23.3\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-c]\nversion = \"0.24.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-c-sharp]\nversion = \"0.23.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-cmake]\nversion = \"0.7.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-cpp]\nversion = \"0.23.4\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-css]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-diff]\nversion = \"0.1.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-elixir]\nversion = \"0.3\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-embedded-template]\nversion = \"0.23.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-go]\nversion = \"0.23.4\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-graphql]\nversion = \"0.1.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-html]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-java]\nversion = \"0.23.5\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-javascript]\nversion = \"0.23.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-jsdoc]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-json]\nversion = \"0.24.8\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-kotlin-sg]\nversion = \"0.4.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-lua]\nversion = \"0.4.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-make]\nversion = \"1.1.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-md]\nversion = \"0.5.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-php]\nversion = \"0.24.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-proto]\nversion = \"0.2.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-python]\nversion = \"0.23.6\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-ruby]\nversion = \"0.23.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-rust]\nversion = \"0.24.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-scala]\nversion = \"0.23.4\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-sequel]\nversion = \"0.3.8\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-svelte-next]\nversion = \"0.1.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-swift]\nversion = \"0.7.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-toml-ng]\nversion = \"0.7.0\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-typescript]\nversion = \"0.23.2\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-yaml]\nversion = \"0.7.1\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.tree-sitter-zig]\nversion = \"1.1.2\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\ncore-text = \"=21.0.0\"\nraw-window-handle = \"0.6.2\"\nobjc2 = \"0.6\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-app-kit]\nversion = \"0.3\"\nfeatures = [\"NSMenu\", \"NSMenuItem\", \"NSView\", \"NSWindow\", \"NSResponder\", \"NSEvent\", \"NSImage\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-foundation]\nversion = \"0.3\"\nfeatures = [\"NSData\", \"NSString\", \"NSGeometry\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies]\nraw-window-handle = \"0.6.2\"\nresvg = \"0.45.1\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.windows]\nfeatures = [\"Win32_Foundation\", \"Win32_Graphics_Gdi\", \"Win32_Graphics_GdiPlus\", \"Win32_System_Com\", \"Win32_System_Com_StructuredStorage\", \"Win32_System_LibraryLoader\", \"Win32_System_Memory\", \"Win32_UI_Input_KeyboardAndMouse\", \"Win32_UI_WindowsAndMessaging\", \"Wdk\", \"Wdk_System\", \"Wdk_System_SystemServices\"]\nversion = \"0.58.0\"\n\n[dev-dependencies]\nindoc = \"2\"\n\n[dev-dependencies.gpui]\nfeatures = [\"test-support\"]\nversion = \"0.2.2\"\ngit = \"https://github.com/zed-industries/zed\"\n\n[lints.clippy]\nalmost_complete_range = \"allow\"\narc_with_non_send_sync = \"allow\"\nborrowed_box = \"allow\"\ndbg_macro = \"deny\"\nlet_underscore_future = \"allow\"\nmanual_is_multiple_of = \"allow\"\nmap_entry = \"allow\"\nmodule_inception = \"allow\"\nnon_canonical_partial_ord_impl = \"allow\"\nreversed_empty_ranges = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntodo = \"deny\"\ntype_complexity = \"allow\"\nuseless_conversion = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n",
         "dest": "cargo/vendor/gpui-component",
         "dest-filename": "Cargo.toml"
     },
@@ -3626,12 +3716,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/gpui-component-0315556/crates/assets\" \"cargo/vendor/gpui-component-assets\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/gpui-component-da4f936/crates/assets\" \"cargo/vendor/gpui-component-assets\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gpui-component-assets\"\ndescription = \"Default bundled assets for GPUI Component.\"\nkeywords = [\"desktop\", \"gpui\", \"shadcn\", \"ui\", \"uikit\"]\nlicense = \"Apache-2.0\"\ndocumentation = \"https://docs.rs/gpui-component\"\nhomepage = \"https://longbridge.github.io/gpui-component\"\nrepository = \"https://github.com/longbridge/gpui-component\"\nreadme = \"README.md\"\nedition = \"2024\"\npublish = true\nversion = \"0.5.1\"\nlinks = \"gpui-component-default-icons\"\n\n[lib]\ndoctest = false\n\n[dependencies]\nanyhow = \"1\"\nlog = \"0.4\"\n\n[dependencies.gpui]\ngit = \"https://github.com/zed-industries/zed\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.rust-embed]\nversion = \"8.7.2\"\nfeatures = [\"interpolate-folder-path\", \"include-exclude\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies]\nwasm-bindgen = \"0.2\"\nwasm-bindgen-futures = \"0.4\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.reqwest]\ngit = \"https://github.com/zed-industries/reqwest.git\"\nrev = \"c15662463bda39148ba154100dd44d3fba5873a4\"\ndefault-features = false\nfeatures = [\"charset\", \"http2\", \"macos-system-configuration\", \"multipart\", \"rustls-tls-native-roots\", \"socks\", \"stream\"]\npackage = \"zed-reqwest\"\nversion = \"0.12.15-zed\"\n",
+        "contents": "[package]\nname = \"gpui-component-assets\"\ndescription = \"Default bundled assets for GPUI Component.\"\nkeywords = [\"desktop\", \"gpui\", \"shadcn\", \"ui\", \"uikit\"]\nlicense = \"Apache-2.0\"\ndocumentation = \"https://docs.rs/gpui-component\"\nhomepage = \"https://longbridge.github.io/gpui-component\"\nrepository = \"https://github.com/longbridge/gpui-component\"\nreadme = \"README.md\"\nedition = \"2024\"\npublish = true\nversion = \"0.5.1\"\nlinks = \"gpui-component-default-icons\"\n\n[lib]\ndoctest = false\n\n[dependencies]\nanyhow = \"1\"\nlog = \"0.4\"\n\n[dependencies.gpui]\nversion = \"0.2.2\"\ngit = \"https://github.com/zed-industries/zed\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies.rust-embed]\nversion = \"8.7.2\"\nfeatures = [\"interpolate-folder-path\", \"include-exclude\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies]\nwasm-bindgen = \"0.2\"\nwasm-bindgen-futures = \"0.4\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.reqwest]\ngit = \"https://github.com/zed-industries/reqwest.git\"\nrev = \"c15662463bda39148ba154100dd44d3fba5873a4\"\ndefault-features = false\nfeatures = [\"charset\", \"http2\", \"macos-system-configuration\", \"multipart\", \"rustls-tls-native-roots\", \"socks\", \"stream\"]\npackage = \"zed-reqwest\"\nversion = \"0.12.15-zed\"\n",
         "dest": "cargo/vendor/gpui-component-assets",
         "dest-filename": "Cargo.toml"
     },
@@ -3644,7 +3734,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/gpui-component-0315556/crates/macros\" \"cargo/vendor/gpui-component-macros\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/gpui-component-da4f936/crates/macros\" \"cargo/vendor/gpui-component-macros\""
         ]
     },
     {
@@ -3680,12 +3770,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_linux\" \"cargo/vendor/gpui_linux\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_linux\" \"cargo/vendor/gpui_linux\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gpui_linux\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_linux.rs\"\n\n[features]\ndefault = [\"wayland\", \"x11\"]\ntest-support = [\"gpui/test-support\"]\nwayland = [\"bitflags\", \"gpui_wgpu\", \"ashpd/wayland\", \"calloop-wayland-source\", \"wayland-backend\", \"wayland-client\", \"wayland-cursor\", \"wayland-protocols\", \"wayland-protocols-plasma\", \"wayland-protocols-wlr\", \"filedescriptor\", \"xkbcommon/wayland\", \"open\", \"gpui/wayland\"]\nx11 = [\"gpui_wgpu\", \"ashpd\", \"as-raw-xcb-connection\", \"x11rb\", \"xkbcommon/x11\", \"xim\", \"x11-clipboard\", \"filedescriptor\", \"open\", \"scap?/x11\"]\nscreen-capture = [\"gpui/screen-capture\", \"scap\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies]\naccesskit_unix = \"0.21.0\"\nanyhow = \"1.0.86\"\nbytemuck = \"1\"\nfutures = \"0.3.32\"\nitertools = \"0.14.0\"\nlibc = \"0.2\"\nparking_lot = \"0.12.1\"\npathfinder_geometry = \"0.5\"\npollster = \"0.4.0\"\nprofiling = \"1\"\nsmol = \"2.0\"\nurl = \"2.2\"\ncalloop = \"0.14.3\"\nraw-window-handle = \"0.6\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.gpui_wgpu]\noptional = true\nfeatures = [\"font-kit\"]\npath = \"crates/gpui_wgpu\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.http_client]\npath = \"crates/http_client\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.strum]\nversion = \"0.27.2\"\nfeatures = [\"derive\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.oo7]\nversion = \"0.6\"\ndefault-features = false\nfeatures = [\"async-std\", \"native_crypto\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.ashpd]\noptional = true\nversion = \"0.13\"\ndefault-features = false\nfeatures = [\"async-io\", \"notification\", \"open_uri\", \"file_chooser\", \"settings\", \"trash\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.swash]\nversion = \"0.2.6\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.bitflags]\noptional = true\nversion = \"2.6.0\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.filedescriptor]\nversion = \"0.8.2\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.open]\nversion = \"5.2.0\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.xkbcommon]\nversion = \"0.8.0\"\ndefault-features = false\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.scap]\noptional = true\ngit = \"https://github.com/zed-industries/scap\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\ndefault-features = false\npackage = \"zed-scap\"\nversion = \"0.0.8-zed\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.calloop-wayland-source]\nversion = \"0.4.1\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-backend]\nversion = \"0.3.15\"\nfeatures = [\"client_system\", \"dlopen\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-client]\nversion = \"0.31.11\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-cursor]\nversion = \"0.31.11\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-protocols]\nversion = \"0.32.9\"\nfeatures = [\"client\", \"staging\", \"unstable\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-protocols-plasma]\nversion = \"0.3.9\"\nfeatures = [\"client\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-protocols-wlr]\nversion = \"0.3.9\"\nfeatures = [\"client\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.as-raw-xcb-connection]\nversion = \"1\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.x11rb]\nversion = \"0.13.1\"\nfeatures = [\"allow-unsafe-code\", \"xkb\", \"randr\", \"xinput\", \"cursor\", \"resource_manager\", \"sync\", \"dri3\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.xim]\ngit = \"https://github.com/zed-industries/xim-rs.git\"\nrev = \"16f35a2c881b815a2b6cdfd6687988e84f8447d8\"\nfeatures = [\"x11rb-xcb\", \"x11rb-client\"]\npackage = \"zed-xim\"\nversion = \"0.4.0-zed\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.x11-clipboard]\nversion = \"0.9.3\"\noptional = true\n",
+        "contents": "[package]\nname = \"gpui_linux\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_linux.rs\"\n\n[features]\ndefault = [\"wayland\", \"x11\"]\ntest-support = [\"gpui/test-support\"]\nwayland = [\"bitflags\", \"gpui_wgpu\", \"ashpd/wayland\", \"calloop-wayland-source\", \"wayland-backend\", \"wayland-client\", \"wayland-cursor\", \"wayland-protocols\", \"wayland-protocols-plasma\", \"wayland-protocols-wlr\", \"filedescriptor\", \"xkbcommon/wayland\", \"open\", \"gpui/wayland\"]\nx11 = [\"gpui_wgpu\", \"ashpd\", \"as-raw-xcb-connection\", \"x11rb\", \"xkbcommon/x11\", \"xim\", \"x11-clipboard\", \"filedescriptor\", \"open\", \"scap?/x11\"]\nscreen-capture = [\"gpui/screen-capture\", \"scap\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies]\naccesskit_unix = \"0.21.0\"\nanyhow = \"1.0.86\"\nbytemuck = \"1\"\nfutures = \"0.3.32\"\nitertools = \"0.14.0\"\nlibc = \"0.2\"\nparking_lot = \"0.12.1\"\npathfinder_geometry = \"0.5\"\npollster = \"0.4.0\"\nprofiling = \"1\"\nsmol = \"2.0\"\nurl = \"2.2\"\ncalloop = \"0.14.3\"\nnotify-rust = \"4\"\nraw-window-handle = \"0.6\"\nswash = \"0.2.6\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.gpui_wgpu]\noptional = true\nfeatures = [\"font-kit\"]\npath = \"crates/gpui_wgpu\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.http_client]\npath = \"crates/http_client\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.strum]\nversion = \"0.27.2\"\nfeatures = [\"derive\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.oo7]\nversion = \"0.6\"\ndefault-features = false\nfeatures = [\"async-std\", \"native_crypto\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.ashpd]\noptional = true\nversion = \"0.13\"\ndefault-features = false\nfeatures = [\"async-io\", \"notification\", \"open_uri\", \"file_chooser\", \"settings\", \"trash\"]\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.bitflags]\noptional = true\nversion = \"2.6.0\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.filedescriptor]\nversion = \"0.8.2\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.open]\nversion = \"5.2.0\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.xkbcommon]\nversion = \"0.8.0\"\ndefault-features = false\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.scap]\noptional = true\ngit = \"https://github.com/zed-industries/scap\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\ndefault-features = false\npackage = \"zed-scap\"\nversion = \"0.0.8-zed\"\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.calloop-wayland-source]\nversion = \"0.4.1\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-backend]\nversion = \"0.3.15\"\nfeatures = [\"client_system\", \"dlopen\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-client]\nversion = \"0.31.11\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-cursor]\nversion = \"0.31.11\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-protocols]\nversion = \"0.32.9\"\nfeatures = [\"client\", \"staging\", \"unstable\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-protocols-plasma]\nversion = \"0.3.9\"\nfeatures = [\"client\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.wayland-protocols-wlr]\nversion = \"0.3.9\"\nfeatures = [\"client\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.as-raw-xcb-connection]\nversion = \"1\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.x11rb]\nversion = \"0.13.1\"\nfeatures = [\"allow-unsafe-code\", \"xkb\", \"randr\", \"xinput\", \"cursor\", \"resource_manager\", \"sync\", \"dri3\"]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.xim]\ngit = \"https://github.com/zed-industries/xim-rs.git\"\nrev = \"16f35a2c881b815a2b6cdfd6687988e84f8447d8\"\nfeatures = [\"x11rb-xcb\", \"x11rb-client\"]\npackage = \"zed-xim\"\nversion = \"0.4.0-zed\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"freebsd\\\"))\".dependencies.x11-clipboard]\nversion = \"0.9.3\"\noptional = true\n",
         "dest": "cargo/vendor/gpui_linux",
         "dest-filename": "Cargo.toml"
     },
@@ -3698,12 +3788,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_macos\" \"cargo/vendor/gpui_macos\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_macos\" \"cargo/vendor/gpui_macos\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gpui_macos\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_macos.rs\"\n\n[features]\ndefault = [\"gpui/default\"]\ntest-support = [\"gpui/test-support\"]\nruntime_shaders = []\nfont-kit = [\"dep:font-kit\"]\nscreen-capture = [\"gpui/screen-capture\"]\n\n[dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\naccesskit_macos = \"0.26.0\"\nanyhow = \"1.0.86\"\nasync-task = \"4.7\"\nblock = \"0.1\"\ncocoa = \"=0.26.0\"\ncore-foundation = \"=0.10.0\"\ncore-foundation-sys = \"0.8.6\"\ncore-graphics = \"0.24\"\ncore-text = \"21\"\nctor = \"1.0.6\"\ndispatch2 = \"0.3.1\"\netagere = \"0.2\"\nforeign-types = \"0.5\"\nfutures = \"0.3.32\"\nitertools = \"0.14.0\"\nlibc = \"0.2\"\nmach2 = \"0.5\"\nmetal = \"0.33\"\nobjc = \"0.2\"\nobjc2 = \"0.6\"\nparking_lot = \"0.12.1\"\npathfinder_geometry = \"0.5\"\nraw-window-handle = \"0.6\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.core-video]\nversion = \"0.5.2\"\nfeatures = [\"metal\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.derive_more]\nversion = \"2.1.1\"\nfeatures = [\"add\", \"add_assign\", \"deref\", \"deref_mut\", \"display\", \"from_str\", \"mul\", \"mul_assign\", \"not\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.font-kit]\ngit = \"https://github.com/zed-industries/font-kit\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\npackage = \"zed-font-kit\"\nversion = \"0.14.1-zed\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.media]\npath = \"crates/media\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-app-kit]\nversion = \"0.3.2\"\ndefault-features = false\nfeatures = [\"NSButton\", \"NSControl\", \"NSGraphics\", \"NSResponder\", \"NSView\", \"NSWindow\", \"objc2-core-foundation\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-foundation]\nversion = \"=0.3.2\"\ndefault-features = false\nfeatures = [\"NSArray\", \"NSAttributedString\", \"NSBundle\", \"NSCoder\", \"NSData\", \"NSDate\", \"NSDictionary\", \"NSEnumerator\", \"NSError\", \"NSGeometry\", \"NSNotification\", \"NSNull\", \"NSObjCRuntime\", \"NSObject\", \"NSProcessInfo\", \"NSRange\", \"NSRunLoop\", \"NSString\", \"NSURL\", \"NSUndoManager\", \"NSValue\", \"objc2-core-foundation\", \"std\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.semver]\nversion = \"1.0\"\nfeatures = [\"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.strum]\nversion = \"0.27.2\"\nfeatures = [\"derive\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies.cbindgen]\nversion = \"0.28.0\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dev-dependencies.gpui]\nfeatures = [\"test-support\"]\npath = \"crates/gpui\"\ndefault-features = false\n",
+        "contents": "[package]\nname = \"gpui_macos\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_macos.rs\"\n\n[features]\ndefault = [\"gpui/default\"]\ntest-support = [\"gpui/test-support\"]\nruntime_shaders = []\nfont-kit = [\"dep:font-kit\"]\nscreen-capture = [\"gpui/screen-capture\"]\n\n[dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\naccesskit_macos = \"0.26.0\"\nanyhow = \"1.0.86\"\nasync-task = \"4.7\"\nblock = \"0.1\"\nblock2 = \"0.6\"\ncocoa = \"=0.26.0\"\ncore-foundation = \"0.10\"\ncore-foundation-sys = \"0.8.6\"\ncore-graphics = \"0.24\"\ncore-text = \"21\"\nctor = \"1.0.12\"\ndispatch2 = \"0.3.1\"\netagere = \"0.2\"\nforeign-types = \"0.5\"\nfutures = \"0.3.32\"\nitertools = \"0.14.0\"\nlibc = \"0.2\"\nmach2 = \"0.5\"\nmetal = \"0.33\"\nobjc = \"0.2\"\nobjc2 = \"0.6\"\nobjc2-user-notifications = \"0.3\"\nparking_lot = \"0.12.1\"\npathfinder_geometry = \"0.5\"\nraw-window-handle = \"0.6\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.core-video]\nversion = \"0.5.2\"\nfeatures = [\"metal\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.derive_more]\nversion = \"2.1.1\"\nfeatures = [\"add\", \"add_assign\", \"deref\", \"deref_mut\", \"display\", \"from_str\", \"mul\", \"mul_assign\", \"not\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.font-kit]\ngit = \"https://github.com/zed-industries/font-kit\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\npackage = \"zed-font-kit\"\nversion = \"0.14.1-zed\"\noptional = true\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.media]\npath = \"crates/media\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-app-kit]\nversion = \"0.3.2\"\ndefault-features = false\nfeatures = [\"NSButton\", \"NSControl\", \"NSGraphics\", \"NSResponder\", \"NSView\", \"NSWindow\", \"objc2-core-foundation\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.objc2-foundation]\nversion = \"=0.3.2\"\ndefault-features = false\nfeatures = [\"NSArray\", \"NSAttributedString\", \"NSBundle\", \"NSCoder\", \"NSData\", \"NSDate\", \"NSDictionary\", \"NSEnumerator\", \"NSError\", \"NSGeometry\", \"NSNotification\", \"NSNull\", \"NSObjCRuntime\", \"NSObject\", \"NSProcessInfo\", \"NSRange\", \"NSRunLoop\", \"NSSet\", \"NSString\", \"NSURL\", \"NSUndoManager\", \"NSValue\", \"objc2-core-foundation\", \"std\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.semver]\nversion = \"1.0\"\nfeatures = [\"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.strum]\nversion = \"0.27.2\"\nfeatures = [\"derive\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies.cbindgen]\nversion = \"0.28.0\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"macos\\\")\".build-dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dev-dependencies.gpui]\nfeatures = [\"test-support\"]\npath = \"crates/gpui\"\ndefault-features = false\n",
         "dest": "cargo/vendor/gpui_macos",
         "dest-filename": "Cargo.toml"
     },
@@ -3716,7 +3806,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_macros\" \"cargo/vendor/gpui_macros\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_macros\" \"cargo/vendor/gpui_macros\""
         ]
     },
     {
@@ -3734,7 +3824,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_platform\" \"cargo/vendor/gpui_platform\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_platform\" \"cargo/vendor/gpui_platform\""
         ]
     },
     {
@@ -3752,7 +3842,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_shared_string\" \"cargo/vendor/gpui_shared_string\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_shared_string\" \"cargo/vendor/gpui_shared_string\""
         ]
     },
     {
@@ -3770,7 +3860,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_util\" \"cargo/vendor/gpui_util\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_util\" \"cargo/vendor/gpui_util\""
         ]
     },
     {
@@ -3788,12 +3878,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_web\" \"cargo/vendor/gpui_web\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_web\" \"cargo/vendor/gpui_web\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gpui_web\"\nversion = \"0.1.0\"\npublish = false\nedition = \"2024\"\nlicense = \"Apache-2.0\"\nautoexamples = false\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[features]\ndefault = [\"multithreaded\"]\nmultithreaded = [\"dep:wasm_thread\"]\n\n[lib]\npath = \"src/gpui_web.rs\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies]\nanyhow = \"1.0.86\"\nfutures = \"0.3.32\"\nwasm-bindgen = \"0.2.120\"\nwasm-bindgen-futures = \"0.4\"\nweb-time = \"1.1.0\"\nconsole_error_panic_hook = \"0.1.7\"\njs-sys = \"0.3\"\nraw-window-handle = \"0.6\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.parking_lot]\nfeatures = [\"nightly\"]\nversion = \"0.12.1\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.gpui_wgpu]\npath = \"crates/gpui_wgpu\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.http_client]\npath = \"crates/http_client\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.wasm_thread]\nversion = \"0.3\"\nfeatures = [\"es_modules\"]\noptional = true\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.web-sys]\nversion = \"0.3\"\nfeatures = [\"console\", \"Clipboard\", \"ClipboardEvent\", \"CompositionEvent\", \"CssStyleDeclaration\", \"DataTransfer\", \"Document\", \"DomRect\", \"DragEvent\", \"Element\", \"EventTarget\", \"File\", \"FileList\", \"HtmlCanvasElement\", \"HtmlElement\", \"HtmlInputElement\", \"KeyboardEvent\", \"MediaQueryList\", \"MediaQueryListEvent\", \"MouseEvent\", \"Navigator\", \"PointerEvent\", \"ResizeObserver\", \"ResizeObserverBoxOptions\", \"ResizeObserverEntry\", \"ResizeObserverSize\", \"ResizeObserverOptions\", \"Screen\", \"Storage\", \"VisualViewport\", \"Headers\", \"Request\", \"RequestInit\", \"RequestRedirect\", \"Response\", \"WheelEvent\", \"Window\"]\n",
+        "contents": "[package]\nname = \"gpui_web\"\nversion = \"0.1.0\"\npublish = false\nedition = \"2024\"\nlicense = \"Apache-2.0\"\nautoexamples = false\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[features]\ndefault = [\"multithreaded\"]\nmultithreaded = [\"dep:wasm_thread\"]\n\n[lib]\npath = \"src/gpui_web.rs\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies]\nanyhow = \"1.0.86\"\nfutures = \"0.3.32\"\nwasm-bindgen = \"0.2.120\"\nwasm-bindgen-futures = \"0.4\"\nweb-time = \"1.1.0\"\nconsole_error_panic_hook = \"0.1.7\"\njs-sys = \"0.3\"\nraw-window-handle = \"0.6\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.parking_lot]\nfeatures = [\"nightly\"]\nversion = \"0.12.1\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.gpui_wgpu]\npath = \"crates/gpui_wgpu\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.http_client]\npath = \"crates/http_client\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.wasm_thread]\ngit = \"https://github.com/zed-industries/wasm_thread\"\nrev = \"0cf96c7708dfb97ccf3da50347e25edcf75d6937\"\nversion = \"0.3\"\nfeatures = [\"es_modules\"]\noptional = true\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.web-sys]\nversion = \"0.3\"\nfeatures = [\"console\", \"Clipboard\", \"ClipboardEvent\", \"CompositionEvent\", \"CssStyleDeclaration\", \"DataTransfer\", \"Document\", \"DomRect\", \"DragEvent\", \"Element\", \"EventTarget\", \"HtmlCanvasElement\", \"HtmlElement\", \"HtmlInputElement\", \"IdleDeadline\", \"IdleRequestOptions\", \"KeyboardEvent\", \"Location\", \"MediaQueryList\", \"MediaQueryListEvent\", \"MouseEvent\", \"Navigator\", \"PointerEvent\", \"ResizeObserver\", \"ResizeObserverBoxOptions\", \"ResizeObserverEntry\", \"ResizeObserverSize\", \"ResizeObserverOptions\", \"Screen\", \"Storage\", \"VisualViewport\", \"Headers\", \"Request\", \"RequestCredentials\", \"RequestInit\", \"RequestRedirect\", \"Response\", \"WheelEvent\", \"Window\"]\n",
         "dest": "cargo/vendor/gpui_web",
         "dest-filename": "Cargo.toml"
     },
@@ -3806,12 +3896,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_wgpu\" \"cargo/vendor/gpui_wgpu\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_wgpu\" \"cargo/vendor/gpui_wgpu\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gpui_wgpu\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_wgpu.rs\"\n\n[features]\ndefault = []\nfont-kit = [\"dep:font-kit\"]\n\n[dependencies]\nanyhow = \"1.0.86\"\nbytemuck = \"1\"\ncosmic-text = \"0.19.0\"\netagere = \"0.2\"\nitertools = \"0.14.0\"\nparking_lot = \"0.12.1\"\nprofiling = \"1\"\nraw-window-handle = \"0.6\"\nswash = \"0.2.6\"\nunicode-segmentation = \"1.10\"\nwgpu = \"29.0.4\"\n\n[dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[dependencies.font-kit]\ngit = \"https://github.com/zed-industries/font-kit\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\npackage = \"zed-font-kit\"\nversion = \"0.14.1-zed\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies]\npollster = \"0.4.0\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies]\nwasm-bindgen = \"0.2.120\"\nwasm-bindgen-futures = \"0.4\"\njs-sys = \"0.3\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.web-sys]\nversion = \"0.3\"\nfeatures = [\"HtmlCanvasElement\"]\n\n[dev-dependencies.criterion]\nversion = \"0.5\"\nfeatures = [\"html_reports\"]\n\n[[bench]]\nname = \"layout_line\"\nharness = false\n",
+        "contents": "[package]\nname = \"gpui_wgpu\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_wgpu.rs\"\n\n[features]\ndefault = []\nfont-kit = [\"dep:font-kit\"]\n\n[dependencies]\nanyhow = \"1.0.86\"\nbytemuck = \"1\"\ncosmic-text = \"0.19.0\"\netagere = \"0.2\"\nitertools = \"0.14.0\"\nparking_lot = \"0.12.1\"\nprofiling = \"1\"\nraw-window-handle = \"0.6\"\nswash = \"0.2.6\"\nunicode-segmentation = \"1.10\"\nwgpu = \"29.0.4\"\n\n[dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[dependencies.unicode-bidi]\nversion = \"0.3.18\"\ndefault-features = false\nfeatures = [\"hardcoded-data\"]\n\n[dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[dependencies.font-kit]\ngit = \"https://github.com/zed-industries/font-kit\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\npackage = \"zed-font-kit\"\nversion = \"0.14.1-zed\"\noptional = true\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dependencies]\npollster = \"0.4.0\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies]\nwasm-bindgen = \"0.2.120\"\nwasm-bindgen-futures = \"0.4\"\njs-sys = \"0.3\"\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.web-sys]\nversion = \"0.3\"\nfeatures = [\"HtmlCanvasElement\"]\n\n[target.\"cfg(target_family = \\\"wasm\\\")\".dependencies.wgpu]\nfeatures = [\"webgl\"]\nversion = \"29.0.4\"\n\n[dev-dependencies.criterion]\nversion = \"0.5\"\nfeatures = [\"html_reports\"]\n\n[dev-dependencies.naga]\nversion = \"29.0.4\"\nfeatures = [\"wgsl-in\"]\n\n[[bench]]\nname = \"layout_line\"\nharness = false\n",
         "dest": "cargo/vendor/gpui_wgpu",
         "dest-filename": "Cargo.toml"
     },
@@ -3824,12 +3914,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/gpui_windows\" \"cargo/vendor/gpui_windows\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/gpui_windows\" \"cargo/vendor/gpui_windows\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gpui_windows\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_windows.rs\"\n\n[features]\ndefault = [\"gpui/default\"]\ntest-support = [\"gpui/test-support\"]\nscreen-capture = [\"gpui/screen-capture\", \"scap\"]\n\n[dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies]\naccesskit_windows = \"0.33.1\"\nanyhow = \"1.0.86\"\ndunce = \"1.0\"\netagere = \"0.2\"\nfutures = \"0.3.32\"\nitertools = \"0.14.0\"\nparking_lot = \"0.12.1\"\nrand = \"0.9\"\nraw-window-handle = \"0.6\"\nwindows-core = \"0.61\"\nwindows-numerics = \"0.2\"\nwindows-registry = \"0.5\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.windows]\nversion = \"0.61\"\nfeatures = [\"Foundation_Numerics\", \"Globalization_DateTimeFormatting\", \"Storage_Search\", \"Storage_Streams\", \"System_Threading\", \"UI_ViewManagement\", \"Wdk_System_SystemServices\", \"Win32_Foundation\", \"Win32_Globalization\", \"Win32_Graphics_Direct3D\", \"Win32_Graphics_Direct3D11\", \"Win32_Graphics_Direct3D_Fxc\", \"Win32_Graphics_DirectComposition\", \"Win32_Graphics_DirectWrite\", \"Win32_Graphics_DirectManipulation\", \"Win32_Graphics_Dwm\", \"Win32_Graphics_Dxgi\", \"Win32_Graphics_Dxgi_Common\", \"Win32_Graphics_Gdi\", \"Win32_Graphics_Imaging\", \"Win32_Graphics_Hlsl\", \"Win32_Networking_WinSock\", \"Win32_Security\", \"Win32_Security_Credentials\", \"Win32_Security_Cryptography\", \"Win32_Storage_FileSystem\", \"Win32_System_Com\", \"Win32_System_Com_StructuredStorage\", \"Win32_System_Console\", \"Win32_System_Diagnostics_Debug\", \"Win32_System_DataExchange\", \"Win32_System_IO\", \"Win32_System_JobObjects\", \"Win32_System_LibraryLoader\", \"Win32_System_Memory\", \"Win32_System_Ole\", \"Win32_System_Performance\", \"Win32_System_Pipes\", \"Win32_System_RestartManager\", \"Win32_System_SystemInformation\", \"Win32_System_SystemServices\", \"Win32_System_Threading\", \"Win32_System_Variant\", \"Win32_System_WinRT\", \"Win32_UI_Controls\", \"Win32_UI_HiDpi\", \"Win32_UI_Input_Ime\", \"Win32_UI_Input_KeyboardAndMouse\", \"Win32_UI_Input_Pointer\", \"Win32_UI_Shell\", \"Win32_UI_Shell_Common\", \"Win32_UI_Shell_PropertiesSystem\", \"Win32_UI_WindowsAndMessaging\", \"Win32_Media\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.scap]\noptional = true\ngit = \"https://github.com/zed-industries/scap\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\ndefault-features = false\npackage = \"zed-scap\"\nversion = \"0.0.8-zed\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".build-dependencies]\nwindows-registry = \"0.5\"\n",
+        "contents": "[package]\nname = \"gpui_windows\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/gpui_windows.rs\"\n\n[features]\ndefault = [\"gpui/default\"]\ntest-support = [\"gpui/test-support\"]\nscreen-capture = [\"gpui/screen-capture\", \"scap\"]\n\n[dependencies.gpui]\npath = \"crates/gpui\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies]\naccesskit_windows = \"0.33.1\"\nanyhow = \"1.0.86\"\ndunce = \"1.0\"\netagere = \"0.2\"\nfutures = \"0.3.32\"\nitertools = \"0.14.0\"\nparking_lot = \"0.12.1\"\nrand = \"0.9\"\nraw-window-handle = \"0.6\"\nwindows-core = \"0.61\"\nwindows-numerics = \"0.2\"\nwindows-registry = \"0.5\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.accesskit]\nversion = \"0.24.0\"\nfeatures = [\"enumn\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.collections]\npath = \"crates/collections\"\nversion = \"0.1.0\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.gpui_util]\npath = \"crates/gpui_util\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.image]\nversion = \"0.25.1\"\ndefault-features = false\nfeatures = [\"bmp\", \"dds\", \"exr\", \"ff\", \"gif\", \"hdr\", \"ico\", \"jpeg\", \"png\", \"pnm\", \"qoi\", \"rayon\", \"tga\", \"tiff\", \"webp\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.smallvec]\nversion = \"1.6\"\nfeatures = [\"union\", \"const_new\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.uuid]\nversion = \"1.1.2\"\nfeatures = [\"v4\", \"v5\", \"v7\", \"serde\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.windows]\nversion = \"0.61\"\nfeatures = [\"Data_Xml_Dom\", \"Foundation_Numerics\", \"Globalization_DateTimeFormatting\", \"Storage_Search\", \"Storage_Streams\", \"System_Threading\", \"UI_Notifications\", \"UI_ViewManagement\", \"Wdk_System_SystemServices\", \"Win32_Foundation\", \"Win32_Globalization\", \"Win32_Graphics_Direct3D\", \"Win32_Graphics_Direct3D11\", \"Win32_Graphics_Direct3D_Fxc\", \"Win32_Graphics_DirectComposition\", \"Win32_Graphics_DirectWrite\", \"Win32_Graphics_DirectManipulation\", \"Win32_Graphics_Dwm\", \"Win32_Graphics_Dxgi\", \"Win32_Graphics_Dxgi_Common\", \"Win32_Graphics_Gdi\", \"Win32_Graphics_Imaging\", \"Win32_Graphics_Hlsl\", \"Win32_Networking_WinSock\", \"Win32_Security\", \"Win32_Security_Credentials\", \"Win32_Security_Cryptography\", \"Win32_Storage_FileSystem\", \"Win32_Storage_Packaging_Appx\", \"Win32_System_Com\", \"Win32_System_Com_StructuredStorage\", \"Win32_System_Console\", \"Win32_System_Diagnostics_Debug\", \"Win32_System_DataExchange\", \"Win32_System_IO\", \"Win32_System_JobObjects\", \"Win32_System_LibraryLoader\", \"Win32_System_Memory\", \"Win32_System_Ole\", \"Win32_System_Performance\", \"Win32_System_Pipes\", \"Win32_System_RestartManager\", \"Win32_System_SystemInformation\", \"Win32_System_SystemServices\", \"Win32_System_Threading\", \"Win32_System_Variant\", \"Win32_System_WinRT\", \"Win32_UI_Controls\", \"Win32_UI_HiDpi\", \"Win32_UI_Input_Ime\", \"Win32_UI_Input_KeyboardAndMouse\", \"Win32_UI_Input_Pointer\", \"Win32_UI_Shell\", \"Win32_UI_Shell_Common\", \"Win32_UI_Shell_PropertiesSystem\", \"Win32_UI_WindowsAndMessaging\", \"Win32_Media\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.scap]\noptional = true\ngit = \"https://github.com/zed-industries/scap\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\ndefault-features = false\npackage = \"zed-scap\"\nversion = \"0.0.8-zed\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".build-dependencies]\nwindows-registry = \"0.5\"\n",
         "dest": "cargo/vendor/gpui_windows",
         "dest-filename": "Cargo.toml"
     },
@@ -4154,7 +4244,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/http_client\" \"cargo/vendor/http_client\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/http_client\" \"cargo/vendor/http_client\""
         ]
     },
     {
@@ -4874,6 +4964,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/known-folders/known-folders-1.4.2.crate",
+        "sha256": "7a1886916523694cd6ea3d175f03a1e5010699a2a4cc13696d83d7bea1d80638",
+        "dest": "cargo/vendor/known-folders-1.4.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"7a1886916523694cd6ea3d175f03a1e5010699a2a4cc13696d83d7bea1d80638\", \"files\": {}}",
+        "dest": "cargo/vendor/known-folders-1.4.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/kqueue/kqueue-1.1.1.crate",
         "sha256": "eac30106d7dce88daf4a3fcb4879ea939476d5074a9b7ddd0fb97fa4bed5596a",
         "dest": "cargo/vendor/kqueue-1.1.1"
@@ -5095,27 +5198,27 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/link-section/link-section-0.19.0.crate",
-        "sha256": "e333fe507b738576d6da5bb3f1a7d7a1c80307ed9ef31624c057d844c19c93e9",
-        "dest": "cargo/vendor/link-section-0.19.0"
+        "url": "https://static.crates.io/crates/link-section/link-section-0.19.3.crate",
+        "sha256": "39c29a617ce3df32c08497bdc1ab6e2376e0b17948ac166a2fbe5977c5954cd9",
+        "dest": "cargo/vendor/link-section-0.19.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"e333fe507b738576d6da5bb3f1a7d7a1c80307ed9ef31624c057d844c19c93e9\", \"files\": {}}",
-        "dest": "cargo/vendor/link-section-0.19.0",
+        "contents": "{\"package\": \"39c29a617ce3df32c08497bdc1ab6e2376e0b17948ac166a2fbe5977c5954cd9\", \"files\": {}}",
+        "dest": "cargo/vendor/link-section-0.19.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/linktime-proc-macro/linktime-proc-macro-0.2.0.crate",
-        "sha256": "8c7b0a3383c2a1002d11349c92c85a666a5fb679e96c79d782cf0dbe557fd6ee",
-        "dest": "cargo/vendor/linktime-proc-macro-0.2.0"
+        "url": "https://static.crates.io/crates/linktime-proc-macro/linktime-proc-macro-0.2.3.crate",
+        "sha256": "7e57c38c1e860fd37c604281cdfb1dd2216977fd76a50f85ba2f388ef3219616",
+        "dest": "cargo/vendor/linktime-proc-macro-0.2.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"8c7b0a3383c2a1002d11349c92c85a666a5fb679e96c79d782cf0dbe557fd6ee\", \"files\": {}}",
-        "dest": "cargo/vendor/linktime-proc-macro-0.2.0",
+        "contents": "{\"package\": \"7e57c38c1e860fd37c604281cdfb1dd2216977fd76a50f85ba2f388ef3219616\", \"files\": {}}",
+        "dest": "cargo/vendor/linktime-proc-macro-0.2.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5181,6 +5284,19 @@
         "type": "inline",
         "contents": "{\"package\": \"11d3d7f243d5c5a8b9bb5d6dd2b1602c0cb0b9db1621bafc7ed66e35ff9fe092\", \"files\": {}}",
         "dest": "cargo/vendor/litrs-1.0.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/lnk/lnk-0.6.4.crate",
+        "sha256": "49f0079e22c0db6cb050d4be94c778d50207cd919ddf99a99d85390b5db33908",
+        "dest": "cargo/vendor/lnk-0.6.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"49f0079e22c0db6cb050d4be94c778d50207cd919ddf99a99d85390b5db33908\", \"files\": {}}",
+        "dest": "cargo/vendor/lnk-0.6.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5329,6 +5445,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/mac-notification-sys/mac-notification-sys-0.6.15.crate",
+        "sha256": "fd604973958ddcc11b561193c0fb96ba146506ef2f231ef2e7c35fd2cbc9beca",
+        "dest": "cargo/vendor/mac-notification-sys-0.6.15"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"fd604973958ddcc11b561193c0fb96ba146506ef2f231ef2e7c35fd2cbc9beca\", \"files\": {}}",
+        "dest": "cargo/vendor/mac-notification-sys-0.6.15",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/mach2/mach2-0.5.0.crate",
         "sha256": "6a1b95cd5421ec55b445b5ae102f5ea0e768de1f82bd3001e11f426c269c3aea",
         "dest": "cargo/vendor/mach2-0.5.0"
@@ -5433,12 +5562,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/media\" \"cargo/vendor/media\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/media\" \"cargo/vendor/media\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"media\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\ndescription = \"Bindings to macos media handling APIs for Zed\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/media.rs\"\ndoctest = false\n\n[dependencies]\nanyhow = \"1.0.86\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\ncore-foundation = \"=0.10.0\"\nctor = \"1.0.6\"\nforeign-types = \"0.5\"\nmetal = \"0.33\"\nobjc = \"0.2\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.core-video]\nversion = \"0.5.2\"\nfeatures = [\"metal\"]\n\n[build-dependencies]\nbindgen = \"0.71\"\n",
+        "contents": "[package]\nname = \"media\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\ndescription = \"Bindings to macos media handling APIs for Zed\"\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/media.rs\"\ndoctest = false\n\n[dependencies]\nanyhow = \"1.0.86\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies]\ncore-foundation = \"0.10\"\nctor = \"1.0.12\"\nforeign-types = \"0.5\"\nmetal = \"0.33\"\nobjc = \"0.2\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.core-video]\nversion = \"0.5.2\"\nfeatures = [\"metal\"]\n\n[build-dependencies]\nbindgen = \"0.71\"\n",
         "dest": "cargo/vendor/media",
         "dest-filename": "Cargo.toml"
     },
@@ -5763,6 +5892,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/notify-rust/notify-rust-4.18.0.crate",
+        "sha256": "c5b4c1b4f2aa9f25f63a7a49d3dd0ed567b3670da15330a66b29434be899b891",
+        "dest": "cargo/vendor/notify-rust-4.18.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"c5b4c1b4f2aa9f25f63a7a49d3dd0ed567b3670da15330a66b29434be899b891\", \"files\": {}}",
+        "dest": "cargo/vendor/notify-rust-4.18.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/notify-types/notify-types-1.0.1.crate",
         "sha256": "585d3cb5e12e01aed9e8a1f70d5c6b5e86fe2a6e48fc8cd0b3e0b8df6f6eb174",
         "dest": "cargo/vendor/notify-types-1.0.1"
@@ -5862,6 +6004,19 @@
         "type": "inline",
         "contents": "{\"package\": \"521739c6d2bac4aa25192232afe6841231376b2b26d4d9fae5ecf8ca5772e441\", \"files\": {}}",
         "dest": "cargo/vendor/num-conv-0.2.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/num-derive/num-derive-0.3.3.crate",
+        "sha256": "876a53fff98e03a936a674b29568b0e605f06b29372c2489ff4de23f1949743d",
+        "dest": "cargo/vendor/num-derive-0.3.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"876a53fff98e03a936a674b29568b0e605f06b29372c2489ff4de23f1949743d\", \"files\": {}}",
+        "dest": "cargo/vendor/num-derive-0.3.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6192,6 +6347,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/objc2-core-location/objc2-core-location-0.3.2.crate",
+        "sha256": "ca347214e24bc973fc025fd0d36ebb179ff30536ed1f80252706db19ee452009",
+        "dest": "cargo/vendor/objc2-core-location-0.3.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"ca347214e24bc973fc025fd0d36ebb179ff30536ed1f80252706db19ee452009\", \"files\": {}}",
+        "dest": "cargo/vendor/objc2-core-location-0.3.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/objc2-core-text/objc2-core-text-0.3.2.crate",
         "sha256": "0cde0dfb48d25d2b4862161a4d5fcc0e3c24367869ad306b0c9ec0073bfed92d",
         "dest": "cargo/vendor/objc2-core-text-0.3.2"
@@ -6335,6 +6503,45 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/objc2-security/objc2-security-0.3.2.crate",
+        "sha256": "709fe137109bd1e8b5a99390f77a7d8b2961dafc1a1c5db8f2e60329ad6d895a",
+        "dest": "cargo/vendor/objc2-security-0.3.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"709fe137109bd1e8b5a99390f77a7d8b2961dafc1a1c5db8f2e60329ad6d895a\", \"files\": {}}",
+        "dest": "cargo/vendor/objc2-security-0.3.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/objc2-service-management/objc2-service-management-0.3.2.crate",
+        "sha256": "b213642d6959cc6023ceb1217aa595eaaf09b8094ce95127c103cab611fe65e8",
+        "dest": "cargo/vendor/objc2-service-management-0.3.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"b213642d6959cc6023ceb1217aa595eaaf09b8094ce95127c103cab611fe65e8\", \"files\": {}}",
+        "dest": "cargo/vendor/objc2-service-management-0.3.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/objc2-user-notifications/objc2-user-notifications-0.3.2.crate",
+        "sha256": "9df9128cbbfef73cda168416ccf7f837b62737d748333bfe9ab71c245d76613e",
+        "dest": "cargo/vendor/objc2-user-notifications-0.3.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"9df9128cbbfef73cda168416ccf7f837b62737d748333bfe9ab71c245d76613e\", \"files\": {}}",
+        "dest": "cargo/vendor/objc2-user-notifications-0.3.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/objc_exception/objc_exception-0.1.2.crate",
         "sha256": "ad970fb455818ad6cba4c122ad012fae53ae8b4795f86378bce65e4f6bab2ca4",
         "dest": "cargo/vendor/objc_exception-0.1.2"
@@ -6369,6 +6576,19 @@
         "type": "inline",
         "contents": "{\"package\": \"ff76201f031d8863c38aa7f905eca4f53abbfa15f609db4277d44cd8938f33fe\", \"files\": {}}",
         "dest": "cargo/vendor/object-0.37.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/object/object-0.39.1.crate",
+        "sha256": "2e5a6c098c7a3b6547378093f5cc30bc54fd361ce711e05293a5cc589562739b",
+        "dest": "cargo/vendor/object-0.39.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"2e5a6c098c7a3b6547378093f5cc30bc54fd361ce711e05293a5cc589562739b\", \"files\": {}}",
+        "dest": "cargo/vendor/object-0.39.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6434,6 +6654,19 @@
         "type": "inline",
         "contents": "{\"package\": \"b2b03ff07a220d0d0ec9a1f0f238951b7967a5a2e96aefcd21a117b1083415e9\", \"files\": {}}",
         "dest": "cargo/vendor/opener-0.8.5",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/openlogi-async-hid/openlogi-async-hid-0.5.3-openlogi.1.crate",
+        "sha256": "883f2f413df036fd1b943bcd99d83cb0cfd76d0dc2586a16773f6d9aee1f5887",
+        "dest": "cargo/vendor/openlogi-async-hid-0.5.3-openlogi.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"883f2f413df036fd1b943bcd99d83cb0cfd76d0dc2586a16773f6d9aee1f5887\", \"files\": {}}",
+        "dest": "cargo/vendor/openlogi-async-hid-0.5.3-openlogi.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6512,6 +6745,19 @@
         "type": "inline",
         "contents": "{\"package\": \"9aa2b01e1d916879f73a53d01d1d6cee68adbb31d6d9177a8cfce093cced1d50\", \"files\": {}}",
         "dest": "cargo/vendor/ordered-stream-0.2.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/owo-colors/owo-colors-4.3.0.crate",
+        "sha256": "d211803b9b6b570f68772237e415a029d5a50c65d382910b879fb19d3271f94d",
+        "dest": "cargo/vendor/owo-colors-4.3.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"d211803b9b6b570f68772237e415a029d5a50c65d382910b879fb19d3271f94d\", \"files\": {}}",
+        "dest": "cargo/vendor/owo-colors-4.3.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6686,7 +6932,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/tooling/perf\" \"cargo/vendor/perf\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/tooling/perf\" \"cargo/vendor/perf\""
         ]
     },
     {
@@ -7221,14 +7467,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/psm/psm-0.1.31.crate",
-        "sha256": "645dbe486e346d9b5de3ef16ede18c26e6c70ad97418f4874b8b1889d6e761ea",
-        "dest": "cargo/vendor/psm-0.1.31"
+        "url": "https://static.crates.io/crates/psm/psm-0.1.32.crate",
+        "sha256": "4dcd034599e63b970727f70d79e02d62390a4a84f7c6b827c27c46d5ac3fa622",
+        "dest": "cargo/vendor/psm-0.1.32"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"645dbe486e346d9b5de3ef16ede18c26e6c70ad97418f4874b8b1889d6e761ea\", \"files\": {}}",
-        "dest": "cargo/vendor/psm-0.1.31",
+        "contents": "{\"package\": \"4dcd034599e63b970727f70d79e02d62390a4a84f7c6b827c27c46d5ac3fa622\", \"files\": {}}",
+        "dest": "cargo/vendor/psm-0.1.32",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7715,7 +7961,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/refineable\" \"cargo/vendor/refineable\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/refineable\" \"cargo/vendor/refineable\""
         ]
     },
     {
@@ -8201,7 +8447,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/scheduler\" \"cargo/vendor/scheduler\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/scheduler\" \"cargo/vendor/scheduler\""
         ]
     },
     {
@@ -8817,14 +9063,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/stacker/stacker-0.1.24.crate",
-        "sha256": "640c8cdd92b6b12f5bcb1803ca3bbf5ab96e5e6b6b96b9ab77dabe9e880b3190",
-        "dest": "cargo/vendor/stacker-0.1.24"
+        "url": "https://static.crates.io/crates/stacker/stacker-0.1.25.crate",
+        "sha256": "707f49d46706bacf8a2b00d51dace3f9de527c13eec3778f570c411f89e69967",
+        "dest": "cargo/vendor/stacker-0.1.25"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"640c8cdd92b6b12f5bcb1803ca3bbf5ab96e5e6b6b96b9ab77dabe9e880b3190\", \"files\": {}}",
-        "dest": "cargo/vendor/stacker-0.1.24",
+        "contents": "{\"package\": \"707f49d46706bacf8a2b00d51dace3f9de527c13eec3778f570c411f89e69967\", \"files\": {}}",
+        "dest": "cargo/vendor/stacker-0.1.25",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -8960,6 +9206,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/substring/substring-1.4.5.crate",
+        "sha256": "42ee6433ecef213b2e72f587ef64a2f5943e7cd16fbd82dbe8bc07486c534c86",
+        "dest": "cargo/vendor/substring-1.4.5"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"42ee6433ecef213b2e72f587ef64a2f5943e7cd16fbd82dbe8bc07486c534c86\", \"files\": {}}",
+        "dest": "cargo/vendor/substring-1.4.5",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/subtle/subtle-2.6.1.crate",
         "sha256": "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292",
         "dest": "cargo/vendor/subtle-2.6.1"
@@ -8986,12 +9245,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/sum_tree\" \"cargo/vendor/sum_tree\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/sum_tree\" \"cargo/vendor/sum_tree\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"sum_tree\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\ndescription = \"A sum tree data structure, a concurrency-friendly B-tree\"\n\n[package.metadata.cargo-machete]\nignored = [\"tracing\"]\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/sum_tree.rs\"\ndoctest = false\n\n[dependencies]\nheapless = \"0.9.2\"\nrayon = \"1.8\"\ntracing = \"0.1.40\"\n\n[dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[dependencies.ztracing]\npath = \"crates/ztracing\"\n\n[dependencies.proptest]\noptional = true\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[dev-dependencies]\nctor = \"1.0.6\"\nrand = \"0.9\"\n\n[dev-dependencies.proptest]\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[dev-dependencies.zlog]\npath = \"crates/zlog\"\n\n[features]\ntest-support = [\"proptest\"]\n",
+        "contents": "[package]\nname = \"sum_tree\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\nlicense = \"Apache-2.0\"\ndescription = \"A sum tree data structure, a concurrency-friendly B-tree\"\n\n[package.metadata.cargo-machete]\nignored = [\"tracing\"]\n\n[lints.rust.unexpected_cfgs]\nlevel = \"allow\"\n\n[lints.clippy]\ndbg_macro = \"deny\"\ntodo = \"deny\"\ndeclare_interior_mutable_const = \"deny\"\nredundant_clone = \"deny\"\ndisallowed_methods = \"deny\"\ntype_complexity = \"allow\"\nlet_underscore_future = \"allow\"\nsingle_range_in_vec_init = \"allow\"\ntoo_many_arguments = \"allow\"\nlarge_enum_variant = \"allow\"\nnonminimal_bool = \"allow\"\n\n[lints.clippy.style]\nlevel = \"allow\"\npriority = -1\n\n[lib]\npath = \"src/sum_tree.rs\"\ndoctest = false\n\n[dependencies]\nheapless = \"0.9.2\"\nrayon = \"1.8\"\ntracing = \"0.1.40\"\n\n[dependencies.log]\nversion = \"0.4.16\"\nfeatures = [\"kv_unstable_serde\", \"serde\"]\n\n[dependencies.ztracing]\npath = \"crates/ztracing\"\n\n[dependencies.proptest]\noptional = true\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[dev-dependencies]\nctor = \"1.0.12\"\nrand = \"0.9\"\n\n[dev-dependencies.proptest]\ngit = \"https://github.com/proptest-rs/proptest\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\nfeatures = [\"attr-macro\"]\n\n[dev-dependencies.zlog]\npath = \"crates/zlog\"\n\n[features]\ntest-support = [\"proptest\"]\n",
         "dest": "cargo/vendor/sum_tree",
         "dest-filename": "Cargo.toml"
     },
@@ -9199,6 +9458,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/syn/syn-1.0.109.crate",
+        "sha256": "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237",
+        "dest": "cargo/vendor/syn-1.0.109"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237\", \"files\": {}}",
+        "dest": "cargo/vendor/syn-1.0.109",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/syn/syn-2.0.117.crate",
         "sha256": "e665b8803e7b1d2a727f4023456bbbbe74da67099c585258af0ad9c5013b9b99",
         "dest": "cargo/vendor/syn-2.0.117"
@@ -9316,14 +9588,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/taffy/taffy-0.12.1.crate",
-        "sha256": "73afc801dd6bd47529eaa7c7e90557f107527d1b7c9c7ed7d7803c7b8d0c357f",
-        "dest": "cargo/vendor/taffy-0.12.1"
+        "url": "https://static.crates.io/crates/taffy/taffy-0.12.2.crate",
+        "sha256": "340a09581f29809fc0df82a3955501dc7f2a21f887e5d1c13dbe288fe1c0bef4",
+        "dest": "cargo/vendor/taffy-0.12.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"73afc801dd6bd47529eaa7c7e90557f107527d1b7c9c7ed7d7803c7b8d0c357f\", \"files\": {}}",
-        "dest": "cargo/vendor/taffy-0.12.1",
+        "contents": "{\"package\": \"340a09581f29809fc0df82a3955501dc7f2a21f887e5d1c13dbe288fe1c0bef4\", \"files\": {}}",
+        "dest": "cargo/vendor/taffy-0.12.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -9376,6 +9648,19 @@
         "type": "inline",
         "contents": "{\"package\": \"57c1932595af3b23fc8635cc23c28c54fb658622e261ad7f8f026da70e69f350\", \"files\": {}}",
         "dest": "cargo/vendor/tarpc-plugins-0.15.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/tauri-winrt-notification/tauri-winrt-notification-0.7.3.crate",
+        "sha256": "9ed071c670382e85fc2f48ae706492d8c338f4f89bf72520d32f8abfe880aade",
+        "dest": "cargo/vendor/tauri-winrt-notification-0.7.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"9ed071c670382e85fc2f48ae706492d8c338f4f89bf72520d32f8abfe880aade\", \"files\": {}}",
+        "dest": "cargo/vendor/tauri-winrt-notification-0.7.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -10356,7 +10641,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/util_macros\" \"cargo/vendor/util_macros\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/util_macros\" \"cargo/vendor/util_macros\""
         ]
     },
     {
@@ -10710,16 +10995,21 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/wasm_thread/wasm_thread-0.3.3.crate",
-        "sha256": "b7516db7f32decdadb1c3b8deb1b7d78b9df7606c5cc2f6241737c2ab3a0258e",
-        "dest": "cargo/vendor/wasm_thread-0.3.3"
+        "type": "shell",
+        "commands": [
+            "cp -r --reflink=auto \"flatpak-cargo/git/wasm_thread-0cf96c7/.\" \"cargo/vendor/wasm_thread\""
+        ]
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"b7516db7f32decdadb1c3b8deb1b7d78b9df7606c5cc2f6241737c2ab3a0258e\", \"files\": {}}",
-        "dest": "cargo/vendor/wasm_thread-0.3.3",
+        "contents": "[package]\nname = \"wasm_thread\"\nversion = \"0.3.3\"\nauthors = [\"Jurgis Balciunas <chemicstry@gmail.com>\"]\nedition = \"2018\"\ndescription = \"An std thread replacement for wasm32 target\"\nlicense = \"Apache-2.0 OR MIT\"\nrepository = \"https://github.com/chemicstry/wasm_thread\"\nhomepage = \"https://github.com/chemicstry/wasm_thread\"\ndocumentation = \"https://docs.rs/wasm_thread\"\nkeywords = [\"thread\", \"wasm\", \"parallel\", \"concurrency\"]\ncategories = [\"concurrency\", \"wasm\"]\nreadme = \"README.md\"\n\n[package.metadata.docs.rs]\ntargets = [\"wasm32-unknown-unknown\"]\n\n[features]\ndefault = [\"es_modules\"]\nes_modules = []\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dependencies]\nwasm-bindgen = \"0.2.95\"\njs-sys = \"0.3.72\"\nfutures = \"0.3.31\"\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dependencies.web-sys]\nversion = \"0.3.72\"\nfeatures = [\"Blob\", \"DedicatedWorkerGlobalScope\", \"MessageEvent\", \"Url\", \"Worker\", \"WorkerType\", \"WorkerOptions\", \"Window\", \"Navigator\", \"WorkerNavigator\"]\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dev-dependencies]\nconsole_error_panic_hook = \"0.1.7\"\nwasm-bindgen-test = \"0.3.45\"\nasync-channel = \"2.3.1\"\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dev-dependencies.console_log]\nversion = \"1.0.0\"\nfeatures = [\"color\"]\n\n[dev-dependencies]\nlog = \"0.4.22\"\nenv_logger = \"0.11.5\"\n",
+        "dest": "cargo/vendor/wasm_thread",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": null, \"files\": {}}",
+        "dest": "cargo/vendor/wasm_thread",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -10954,6 +11244,19 @@
         "type": "inline",
         "contents": "{\"package\": \"01e09be551dc939498bdd5f6b2c66e55ab275dad25825267a08605a80fc9f0af\", \"files\": {}}",
         "dest": "cargo/vendor/wgpu-core-deps-emscripten-29.0.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/wgpu-core-deps-wasm/wgpu-core-deps-wasm-29.0.4.crate",
+        "sha256": "af1fb1798be2a912497d4c224f72d39bb0cb34af50e8bcc29865bc339c943059",
+        "dest": "cargo/vendor/wgpu-core-deps-wasm-29.0.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"af1fb1798be2a912497d4c224f72d39bb0cb34af50e8bcc29865bc339c943059\", \"files\": {}}",
+        "dest": "cargo/vendor/wgpu-core-deps-wasm-29.0.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -11661,6 +11964,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/windows-version/windows-version-0.1.7.crate",
+        "sha256": "e4060a1da109b9d0326b7262c8e12c84df67cc0dbc9e33cf49e01ccc2eb63631",
+        "dest": "cargo/vendor/windows-version-0.1.7"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"e4060a1da109b9d0326b7262c8e12c84df67cc0dbc9e33cf49e01ccc2eb63631\", \"files\": {}}",
+        "dest": "cargo/vendor/windows-version-0.1.7",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/windows_aarch64_gnullvm/windows_aarch64_gnullvm-0.42.2.crate",
         "sha256": "597a5118570b68bc08d8d59125332c54f1ba9d9adeedeef5b99b02ba2b0698f8",
         "dest": "cargo/vendor/windows_aarch64_gnullvm-0.42.2"
@@ -12012,6 +12328,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/winstructs/winstructs-0.3.2.crate",
+        "sha256": "6dc7406cd936173d9cc3a4fd5dc5b295bc59612439d72038e3d7ac4e5dd42de9",
+        "dest": "cargo/vendor/winstructs-0.3.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"6dc7406cd936173d9cc3a4fd5dc5b295bc59612439d72038e3d7ac4e5dd42de9\", \"files\": {}}",
+        "dest": "cargo/vendor/winstructs-0.3.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/wio/wio-0.2.2.crate",
         "sha256": "5d129932f4644ac2396cb456385cbf9e63b5b30c6e8dc4820bdca4eb082037a5",
         "dest": "cargo/vendor/wio-0.2.2"
@@ -12241,6 +12570,19 @@
         "type": "inline",
         "contents": "{\"package\": \"bec9e4a500ca8864c5b47b8b482a73d62e4237670e5b5f1d6b9e3cae50f28f2b\", \"files\": {}}",
         "dest": "cargo/vendor/xcursor-0.3.10",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/xdg/xdg-3.0.0.crate",
+        "sha256": "2fb433233f2df9344722454bc7e96465c9d03bff9d77c248f9e7523fe79585b5",
+        "dest": "cargo/vendor/xdg-3.0.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"2fb433233f2df9344722454bc7e96465c9d03bff9d77c248f9e7523fe79585b5\", \"files\": {}}",
+        "dest": "cargo/vendor/xdg-3.0.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -12731,7 +13073,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/zlog\" \"cargo/vendor/zlog\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/zlog\" \"cargo/vendor/zlog\""
         ]
     },
     {
@@ -12762,7 +13104,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/ztracing\" \"cargo/vendor/ztracing\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/ztracing\" \"cargo/vendor/ztracing\""
         ]
     },
     {
@@ -12780,7 +13122,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/zed-1a246ef/crates/ztracing_macro\" \"cargo/vendor/ztracing_macro\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/zed-cc053a4/crates/ztracing_macro\" \"cargo/vendor/ztracing_macro\""
         ]
     },
     {
@@ -12901,7 +13243,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/aprilnea/appicon\"]\ngit = \"https://github.com/aprilnea/appicon\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.1.1\"\n\n[source.\"https://github.com/zed-industries/zed\"]\ngit = \"https://github.com/zed-industries/zed\"\nreplace-with = \"vendored-sources\"\nrev = \"1a246efd7e1b83ab568ec5e3e6c1a43a42e1abba\"\n\n[source.\"https://github.com/longbridge/gpui-component\"]\ngit = \"https://github.com/longbridge/gpui-component\"\nreplace-with = \"vendored-sources\"\nrev = \"031555662e99a1b5a549990b47f246d475b8288a\"\n\n[source.\"https://github.com/aprilnea/gpui-updater\"]\ngit = \"https://github.com/aprilnea/gpui-updater\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.0.7\"\n\n[source.\"https://github.com/proptest-rs/proptest\"]\ngit = \"https://github.com/proptest-rs/proptest\"\nreplace-with = \"vendored-sources\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\n\n[source.\"https://github.com/zed-industries/xim-rs\"]\ngit = \"https://github.com/zed-industries/xim-rs\"\nreplace-with = \"vendored-sources\"\nrev = \"16f35a2c881b815a2b6cdfd6687988e84f8447d8\"\n\n[source.\"https://github.com/zed-industries/font-kit\"]\ngit = \"https://github.com/zed-industries/font-kit\"\nreplace-with = \"vendored-sources\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\n\n[source.\"https://github.com/zed-industries/reqwest\"]\ngit = \"https://github.com/zed-industries/reqwest\"\nreplace-with = \"vendored-sources\"\nrev = \"c15662463bda39148ba154100dd44d3fba5873a4\"\n\n[source.\"https://github.com/zed-industries/scap\"]\ngit = \"https://github.com/zed-industries/scap\"\nreplace-with = \"vendored-sources\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/aprilnea/appicon\"]\ngit = \"https://github.com/aprilnea/appicon\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.1.1\"\n\n[source.\"https://github.com/zed-industries/zed\"]\ngit = \"https://github.com/zed-industries/zed\"\nreplace-with = \"vendored-sources\"\nrev = \"cc053a4a6fa2fd0e8793201ed9099466af1be0b1\"\n\n[source.\"https://github.com/longbridge/gpui-component\"]\ngit = \"https://github.com/longbridge/gpui-component\"\nreplace-with = \"vendored-sources\"\nrev = \"da4f93696dc2b2b4d91bcc42412b9053a3d24de8\"\n\n[source.\"https://github.com/aprilnea/gpui-updater\"]\ngit = \"https://github.com/aprilnea/gpui-updater\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.0.7\"\n\n[source.\"https://github.com/proptest-rs/proptest\"]\ngit = \"https://github.com/proptest-rs/proptest\"\nreplace-with = \"vendored-sources\"\nrev = \"3dca198a8fef1b32e3a66f1e1897c955b4dc5b5b\"\n\n[source.\"https://github.com/zed-industries/wasm_thread\"]\ngit = \"https://github.com/zed-industries/wasm_thread\"\nreplace-with = \"vendored-sources\"\nrev = \"0cf96c7708dfb97ccf3da50347e25edcf75d6937\"\n\n[source.\"https://github.com/zed-industries/xim-rs\"]\ngit = \"https://github.com/zed-industries/xim-rs\"\nreplace-with = \"vendored-sources\"\nrev = \"16f35a2c881b815a2b6cdfd6687988e84f8447d8\"\n\n[source.\"https://github.com/zed-industries/font-kit\"]\ngit = \"https://github.com/zed-industries/font-kit\"\nreplace-with = \"vendored-sources\"\nrev = \"94b0f28166665e8fd2f53ff6d268a14955c82269\"\n\n[source.\"https://github.com/zed-industries/reqwest\"]\ngit = \"https://github.com/zed-industries/reqwest\"\nreplace-with = \"vendored-sources\"\nrev = \"c15662463bda39148ba154100dd44d3fba5873a4\"\n\n[source.\"https://github.com/zed-industries/scap\"]\ngit = \"https://github.com/zed-industries/scap\"\nreplace-with = \"vendored-sources\"\nrev = \"4afea48c3b002197176fb19cd0f9b180dd36eaac\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
